@@ -60,16 +60,26 @@
    </div>
    <!-- added class to section "search-input" -->
    <section id="search-results-hotel">
+      <!--have put the search fields into a form element-->
+      <form>
       <h2 class="heading">Search for a City</h2>
       <input class="city-search" type="text" id="search-input" placeholder="London" />
       <div class="form-label">Check in</div>
       <input class="city-search" type="date" id="start-date" placeholder="Start date" />
       <div class="form-label">Check out</div>
       <input class="city-search" type="date" id="end-date" placeholder="End date" />
+      <!--input for number of rooms, adults, children-->
+      <label for="adults">Number of Adults:</label>
+      <input type="number" id="adults" name="adults" min="1" max="10" value="1" required>
+      <label for="children">Number of Children:</label>
+      <input type="number" id="children" name="children" min="0" max="10" value="0" required>
+      <label for="rooms">Number of Rooms:</label>
+      <input type="number" id="rooms" name="rooms" min="1" max="5" value="1" required>
       <button type="submit" class="btn search-button" id="search-button" aria-label="submit search"
          style="background-color: rgb(37, 107, 176);">
          Search
       </button>
+   </form>
    </section>
    <div id="carousel" class="carousel slide">
       <div id="carousel-item active">

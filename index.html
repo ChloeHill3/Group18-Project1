@@ -62,11 +62,14 @@
    <section id="search-results-hotel">
       <!--have put the search fields into a form element-->
       <form>
-      <h2 class="heading">Search for a City</h2>
+         <!--deleted the h2 and added a label for the city input-->
+      <label for="search-input">Search city:</label>
       <input class="city-search" type="text" id="search-input" placeholder="London" />
-      <div class="form-label">Check in</div>
+      <!--deleted the div with a class of label and added a label element-->
+      <label for="start-date">Check-in:</label>
       <input class="city-search" type="date" id="start-date" placeholder="Start date" />
-      <div class="form-label">Check out</div>
+      <!--deleted the div with a class of label and added a label element-->
+      <label for="end-date">Check-out:</label>
       <input class="city-search" type="date" id="end-date" placeholder="End date" />
       <!--input for number of rooms, adults, children-->
       <label for="adults">Number of Adults:</label>

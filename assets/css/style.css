@@ -50,3 +50,57 @@ section {
    color:#ffffff
 }
 
+
+/* Search/Form Section Styles  */
+#search-button {
+   margin: 10px;
+   border-radius: 2px;
+ }
+
+ #ticketmaster {
+   background-color: rgb(236, 236, 236);
+   border-radius: 5px;
+   padding: 20px;
+   width: auto;
+   height: 99.5%;
+   margin: 15px 25px 25px 25px;
+
+ }
+
+.hero {
+   background-color: rgb(236, 236, 236);
+   height: 80px;
+   /* Flexbox stuff */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.hero h4 {
+   font-family: 'MuseoModerno', cursive;
+
+}
+
+#search-results-hotel {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+/* Carousel Styles */
+#carousel {
+   background-color: rgb(236, 236, 236);
+   border-radius: 5px;
+   padding: 20px;
+   width: auto;
+   height: 99.5%;
+   margin: 15px 25px 25px 25px;
+}
+
+#adults, #rooms, #children {
+   display: inline-block
+}
+
+.card-header {
+   font-family: 'Dosis', sans-serif;
+
+}

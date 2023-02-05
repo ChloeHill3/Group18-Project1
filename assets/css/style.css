@@ -1,5 +1,193 @@
 
+/* Global Styles */
+.heading {
+   font-family: 'Quicksand', sans-serif;
+   font-size: 30px;
+}
 
+h3,
+h4,
+h5 {
+   font-family: 'Quicksand', sans-serif;
+}
+
+label,
+input,
+a,
+p {
+   font-family: 'Quicksand', sans-serif;
+}
+
+
+.nav-item a {
+   font-family: 'Quicksand', sans-serif;
+}
+
+#page-top {
+   background-color: #ffffff;
+
+}
+
+.booknow h4 {
+   font-family: 'Montez', cursive;
+   font-size: 45px;
+}
+
+/* Section Styles */
+section {
+   background-color: rgb(236, 236, 236);
+   border-radius: 5px;
+   padding: 5px;
+   width: auto;
+   height: 99.5%;
+   margin: 15px 25px 15px 25px;
+}
+
+/* Navbar Styles */
+
+.navbar {
+   max-width: 2000px;
+   margin-left: 0px;
+   background-color: rgb(255, 255, 255);
+   min-width: 500px;
+
+}
+
+.navbar a {
+   display: inline-flex;
+   color: #000000;
+   border-bottom: #3671C3 solid 2px;
+
+}
+
+.navbar a:hover {
+   color: #28538f;
+   border-bottom: #3671c37c solid 5px;
+}
+
+/* Search/Form Section Styles  */
+#search-button {
+   margin: 10px;
+   border-radius: 2px;
+   background-color: #3671C3;
+   border: none;
+   border-radius: 5px;
+}
+
+
+/* Hero Section Styles */
+.hero {
+   /* Flexbox stuff */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-image: url(./images/memories\ that\ last\ a\ lifetime\ \(1\).svg);
+   height: 250px;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   object-fit: contain;
+   background-color: #ffffff;
+}
+
+.hero h4 {
+   font-family: 'Quicksand', sans-serif;
+
+}
+
+/* Form Styles */
+form {
+   margin-top: 2%;
+}
+
+input {
+   background-color: rgb(255, 255, 255);
+   border: none;
+   border-radius: 5%;
+
+}
+
+/* Hotel Result Styles */
+#search-results-hotel {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* Carousel Styles */
+#carousel {
+   background-color: rgb(236, 236, 236);
+   border-radius: 5px;
+   padding: 20px;
+   width: auto;
+   height: 99.5%;
+   margin: 15px 25px 25px 25px;
+}
+
+#adults,
+#rooms,
+#children {
+   display: inline-block
+}
+
+.card-header {
+   font-family: 'Quicksand', sans-serif;
+
+}
+
+#logo {
+   height: 4.5rem;
+}
+
+.booknow {
+   animation-duration: 3s;
+   animation-name: slidein;
+   animation-iteration-count: 1;
+   animation-direction: alternate;
+}
+
+
+@keyframes slidein {
+   from {
+      margin-left: 100%;
+      width: 300%;
+   }
+
+   to {
+      margin-left: 0%;
+      width: 100%;
+   }
+}
+
+
+.events-card {
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.events-card {
+   padding: 0.5rem;
+}
+
+.btn-primary {
+   margin-top: 2em;
+   margin-bottom: 5em;
+}
+
+/* Footer Styles */
+footer {
+   padding: 2rem;
+   width: 100%;
+   height: 10rem;
+
+}
+
+#footer-links {
+   display: flex;
+   justify-content: space-evenly;
+   list-style: none;
+
+}
 .header {
     display: flex;
     /*justify-content: space-between;*/

@@ -5,75 +5,113 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>Travel-Xperience Home</title>
    <link rel="stylesheet" href="./assets/css/style.css">
+   <!-- MomentJS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    <!--Added the css bootstrap link-->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <!-- added google fonts so we can have different font styles -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Dosis&family=MuseoModerno:wght@300&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
-   <div>
-      <!-- added nav bar -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
-               aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarColor02">
-               <ul class="navbar-nav me-auto">
-                  <li class="nav-item">
-                     <a class="nav-link active" href="#">Home
-                        <span class="visually-hidden">(current)</span>
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">About</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                        aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
-                     </div>
-                  </li>
-               </ul>
-               <form class="d-flex">
-                  <input class="form-control me-sm-2" type="search" placeholder="Search">
-                  <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-               </form>
-            </div>
+   <!--gave a class of header to the div containing the nav bar, fixed narbar to top-->
+   <!--deleted the class of dark from nav bar so that i can give a background image to the header-->
+   <!--added a logo to the nav-->
+   <div class="header sticky-top">
+      <!-- added nav bar, edited travel-experience colors and styles -->
+      <nav class="navbar navbar-expand-lg">
+         <div class="container-fluid mr-auto">
+            <div id="logo-div"><img id="logo" src="./assets/images/travelLogo.png" alt="plane around the globe" /></div>
+            <ul class="navbar-nav ml-auto ">
+               <li class="nav-item ">
+                  <a class="nav-link" href="#">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Attractions</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+               </li>
+            </ul>
          </div>
       </nav>
    </div>
-   <!-- added class to section "search-input" -->
-   <section id="search-results-hotel">
-      <h2 class="heading">Search for a City</h2>
-      <input class="city-search" type="text" id="search-input" placeholder="London" />
-      <div class="form-label">Check in</div>
-      <input class="city-search" type="date" id="start-date" placeholder="Start date" />
-      <div class="form-label">Check out</div>
-      <input class="city-search" type="date" id="end-date" placeholder="End date" />
-      <button type="submit" class="btn search-button" id="search-button" aria-label="submit search"
-         style="background-color: rgb(37, 107, 176);">
-         Search
-      </button>
-   </section>
-   <div id="carousel" class="carousel slide">
-      <div id="carousel-item active">
+   <main>
+      <!-- added hero section for viewers to enjoy and find their next adventure -->
+
+      <section class="hero"></section>
+      <section class="text-center booknow" id="page-top">
+         <h4>Memories that last a lifetime,
+            Book your next adventure.
+         </h4>
+      </section>
+      <!-- added class to section "search-input" -->
+      <section id="search-results-hotel">
+         <hr class="hr">
+         <!--have put the search fields into a form element-->
+         <form id="form-div">
+            <!--deleted the h2 and added a label for the city input-->
+            <label for="search-input">Search city:</label>
+            <input class="city-search" type="text" id="search-input" placeholder="Where are you going?" />
+
+            <!--deleted the div with a class of label and added a label element-->
+            <label for="start-date">Check-in:</label>
+            <input class="city-search" type="date" id="start-date" placeholder="Start date" />
+
+            <!--deleted the div with a class of label and added a label element-->
+            <label for="end-date">Check-out:</label>
+            <input class="city-search" type="date" id="end-date" placeholder="End date" />
+
+            <!--input for number of rooms, adults, children-->
+            <hr class="hr">
+
+            <label for="adults">Number of Adults:</label>
+            <input type="number" id="adults" name="adults" min="1" max="10" value="1" required>
+
+            <label for="children">Number of Children:</label>
+            <input type="number" id="children" name="children" min="0" max="10" value="0" required>
+
+            <label for="rooms">Number of Rooms:</label>
+            <input type="number" id="rooms" name="rooms" min="1" max="5" value="1" required>
+            <button type="submit" class="btn btn-info btn-md search-button" id="search-button"
+               aria-label="submit search">
+               Search
+            </button>
+         </form>
+         <hr class="hr">
+         <!--here starts the carousel for displaying the hotel results/ after the title-->
+      </section>
+      <!--changed id to class as it needs to be unique to one element-->
+      <section id="carousel" class="cards carousel-slide">
          <h2 class="heading">Hotel Results</h2>
+      </section>
+      <!-- added break above so it looks cleaner  -->
+      <section class="cards">
+         <div id="carousel-item active">
+            <div class="card border-light mb-3" style="max-width: 20rem;">
+               <div class="card-header">Hotel Name</div>
+               <img
+                  src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
+                  class="d-block w-100" alt="">
+               <div class="card-body">
+                  <h4 class="card-title">Description</h4>
+                  <p class="card-text">DESCRIPTIVE TEXT.</p>
+                  <a href="#" class="card-link">Click Here for more info</a>
+               </div>
+            </div>
+         </div>
+         <!-- second card -->
          <div class="card border-light mb-3" style="max-width: 20rem;">
             <div class="card-header">Hotel Name</div>
             <img
@@ -85,9 +123,8 @@
                <a href="#" class="card-link">Click Here for more info</a>
             </div>
          </div>
-      </div>
-      <div id="carousel-item active">
-         <h2 class="heading">Hotel Results</h2>
+         </div>
+         <!-- third card -->
          <div class="card border-light mb-3" style="max-width: 20rem;">
             <div class="card-header">Hotel Name</div>
             <img
@@ -99,9 +136,8 @@
                <a href="#" class="card-link">Click Here for more info</a>
             </div>
          </div>
-      </div>
-      <div id="carousel-item active">
-         <h2 class="heading">Hotel Results</h2>
+         </div>
+         <!-- forth card -->
          <div class="card border-light mb-3" style="max-width: 20rem;">
             <div class="card-header">Hotel Name</div>
             <img
@@ -113,9 +149,8 @@
                <a href="#" class="card-link">Click Here for more info</a>
             </div>
          </div>
-      </div>
-      <div id="carousel-item active">
-         <h2 class="heading">Hotel Results</h2>
+         </div>
+         <!-- fifth card -->
          <div class="card border-light mb-3" style="max-width: 20rem;">
             <div class="card-header">Hotel Name</div>
             <img
@@ -127,9 +162,60 @@
                <a href="#" class="card-link">Click Here for more info</a>
             </div>
          </div>
-      </div>
-   </div>
+         </div>
+      </section>
+
+      <!--added  a div with a class of events to display for the user-->
+      <section class="events">
+         <h2 id="tag-events">While you're there...</h2>
+         <h5 class="event-heading">Events</h5>
+         <div class="events-card">
+            <div class="card-body">
+               <h5 class="event-title">Event title</h5>
+               <p class="event-text">"With supporting text below as a natural lead-in to additional content".</p>
+            </div>
+            <div class="card-body">
+               <h5 class="event-title">Event title</h5>
+               <p class="event-text">"With supporting text below as a natural lead-in to additional content".</p>
+            </div>
+            <div class="card-body">
+               <h5 class="event-title">Event title</h5>
+               <p class="event-text">"With supporting text below as a natural lead-in to additional content".</p>
+            </div>
+         </div>
+         <article>
+         <a href="#" id="more-events" class="btn btn-primary center">See more</a></article>
+         </div>
+         <!--use the class HIDDEN to hide the div containing the rest of the events on the page-->
+         <div class="events-card" class="hidden">
+            <div class="card-body">
+               <h5 class="event-title">Event title</h5>
+               <p class="event-text">"With supporting text below as a natural lead-in to additional content".</p>
+            </div>
+            <div class="card-body">
+               <h5 class="event-title">Event title</h5>
+               <p class="event-text">"With supporting text below as a natural lead-in to additional content".</p>
+            </div>
+            <div class="card-body">
+               <h5 class="event-title">Event title</h5>
+               <p class="event-text">"With supporting text below as a natural lead-in to additional content".</p>
+            </div>
+         </div>
+         <article>
+            <a href="#" id="more-events" class="btn btn-primary center">See more</a></article>
+      </section>
+      <!--added a footer to the page -->
+      <footer id="footer">
+         <ul id="footer-links">
+            <!--connected the footer links to sections on page-->
+            <li><a href="#form-div">Book now</a></li>
+            <li><a href="#carousel">See hotels</a></li>
+            <li><a href="#events">Events</a></li>
+         </ul>
+      </footer>
+   </main>
    <script src="./assets/js/script.js"></script>
+   
 </body>
 
 </html>

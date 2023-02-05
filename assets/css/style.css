@@ -1,0 +1,52 @@
+/* Global Styles */
+.heading {
+   font-family: 'Dosis', sans-serif;
+   font-size: 30px;
+} 
+h3, 
+h4,
+h5 {
+   font-family: 'Dosis', sans-serif;
+}
+
+label, input, a, p {
+   font-family: 'Dosis', sans-serif;
+}
+
+
+/* Section Styles */
+section {
+   background-color: rgb(236, 236, 236);
+   border-radius: 5px;
+   padding: 5px;
+   width: auto;
+   height: 99.5%;
+   margin: 15px 25px 15px 25px;
+}
+
+/* Navbar Styles */
+
+.navbar {
+      max-width:2000px;
+      margin-left:0px;
+  
+      min-width:500px;
+}
+.navbar-brand {
+   font-family: 'MuseoModerno', cursive;
+
+}
+
+.container-fluid h1 {
+   display: flex;
+   font-size: 35px;
+}
+
+#experience {
+   color:#1a99a56b
+}
+
+#dash {
+   color:#ffffff
+}
+

@@ -1,18 +1,36 @@
 /* Global Styles */
 .heading {
-   font-family: 'Dosis', sans-serif;
+   font-family: 'Quicksand', sans-serif;
    font-size: 30px;
-} 
-h3, 
+}
+
+h3,
 h4,
 h5 {
-   font-family: 'Dosis', sans-serif;
+   font-family: 'Quicksand', sans-serif;
 }
 
-label, input, a, p {
-   font-family: 'Dosis', sans-serif;
+label,
+input,
+a,
+p {
+   font-family: 'Quicksand', sans-serif;
 }
 
+
+.nav-item a {
+   font-family: 'Quicksand', sans-serif;
+}
+
+#page-top {
+   background-color: #ffffff;
+
+}
+
+.booknow h4 {
+   font-family: 'Montez', cursive;
+   font-size: 45px;
+}
 
 /* Section Styles */
 section {
@@ -27,65 +45,74 @@ section {
 /* Navbar Styles */
 
 .navbar {
-      max-width:2000px;
-      margin-left:0px;
-  
-      min-width:500px;
-}
-.navbar-brand {
-   font-family: 'MuseoModerno', cursive;
+   max-width: 2000px;
+   margin-left: 0px;
+   background-color: rgb(255, 255, 255);
+   min-width: 500px;
 
 }
 
-.container-fluid h1 {
-   display: flex;
-   font-size: 35px;
+.navbar a {
+   display: inline-flex;
+   color: #000000;
+   border-bottom: #3671C3 solid 2px;
+
 }
 
-#experience {
-   color:#1a99a56b
+.navbar a:hover {
+   color: #28538f;
+   border-bottom: #3671c37c solid 5px;
 }
-
-#dash {
-   color:#ffffff
-}
-
 
 /* Search/Form Section Styles  */
 #search-button {
    margin: 10px;
    border-radius: 2px;
- }
-
- #ticketmaster {
-   background-color: rgb(236, 236, 236);
+   background-color: #3671C3;
+   border: none;
    border-radius: 5px;
-   padding: 20px;
-   width: auto;
-   height: 99.5%;
-   margin: 15px 25px 25px 25px;
+}
 
- }
 
+/* Hero Section Styles */
 .hero {
-   background-color: rgb(236, 236, 236);
-   height: 80px;
    /* Flexbox stuff */
    display: flex;
    justify-content: center;
    align-items: center;
+   background-image: url(./images/memories\ that\ last\ a\ lifetime\ \(1\).svg);
+   height: 250px;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   object-fit: contain;
+   background-color: #ffffff;
 }
 
 .hero h4 {
-   font-family: 'MuseoModerno', cursive;
+   font-family: 'Quicksand', sans-serif;
 
 }
 
+/* Form Styles */
+form {
+   margin-top: 2%;
+}
+
+input {
+   background-color: rgb(255, 255, 255);
+   border: none;
+   border-radius: 5%;
+
+}
+
+/* Hotel Result Styles */
 #search-results-hotel {
    display: flex;
    justify-content: center;
    align-items: center;
 }
+
 /* Carousel Styles */
 #carousel {
    background-color: rgb(236, 236, 236);
@@ -96,11 +123,66 @@ section {
    margin: 15px 25px 25px 25px;
 }
 
-#adults, #rooms, #children {
+#adults,
+#rooms,
+#children {
    display: inline-block
 }
 
 .card-header {
-   font-family: 'Dosis', sans-serif;
+   font-family: 'Quicksand', sans-serif;
 
+}
+
+#logo {
+   height: 4.5rem;
+}
+
+.booknow {
+   animation-duration: 3s;
+   animation-name: slidein;
+   animation-iteration-count: 1;
+   animation-direction: alternate;
+}
+
+
+@keyframes slidein {
+   from {
+      margin-left: 100%;
+      width: 300%;
+   }
+
+   to {
+      margin-left: 0%;
+      width: 100%;
+   }
+}
+
+
+.events-card {
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.events-card {
+   padding: 0.5rem;
+}
+
+.btn-primary {
+   margin-top: 2em;
+   margin-bottom: 5em;
+}
+
+/* Footer Styles */
+footer {
+   padding: 2rem;
+   width: 100%;
+   height: 10rem;
+
+}
+
+#footer-links {
+   display: flex;
+   justify-content: space-evenly;
+   list-style: none;
 }

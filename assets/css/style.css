@@ -4,17 +4,23 @@
     display: flex;
     /*justify-content: space-between;*/
     align-items: center;                            
-    height: 15rem;
+    height: 10rem;
     width: 100%;
     padding-bottom: 2rem;
     margin-top: 0rem;
     margin-bottom: 0.5rem;
     background-color: rgb(175, 224, 248);
-    background-image: url("");
+    background-image: url("/assets/images/memories\ that\ last\ a\ lifetime\ \(1\).svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    object-fit:contain;
+    object-fit: contain;
+    background-size: 600px;
+    height: auto;
+}
+label {
+    padding: 0.1rem;
+    margin-right: 1rem;
 }
 
 

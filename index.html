@@ -7,8 +7,6 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Travel-Xperience Home</title>
    <link rel="stylesheet" href="./assets/css/style.css">
-   <!-- MomentJS -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    <!--Added the css bootstrap link-->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -29,7 +27,7 @@
       <!-- added nav bar, edited travel-experience colors and styles -->
       <nav class="navbar navbar-expand-lg">
          <div class="container-fluid mr-auto">
-            <div id="logo-div"><img id="logo" src="./assets/images/travelLogo.png" alt="plane around the globe" /></div>
+            <div id="logo-div"><img id="logo" src="./assets/images/travelLogo.png" alt="plane around the globe"></div>
             <ul class="navbar-nav ml-auto ">
                <li class="nav-item ">
                   <a class="nav-link" href="#">Home</a>
@@ -88,6 +86,7 @@
                aria-label="submit search">
                Search
             </button>
+            <div class="hide">Wrong Dates Entered, Please Try Again!</div>
          </form>
          <hr class="hr">
          <!--here starts the carousel for displaying the hotel results/ after the title-->
@@ -100,7 +99,7 @@
       <section class="cards">
          <div id="carousel-item active">
             <div class="card border-light mb-3" style="max-width: 20rem;">
-               <div class="card-header">Hotel Name</div>
+               <div class="card-header" id="hotelcard0">Hotel Name</div>
                <img
                   src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
                   class="d-block w-100" alt="">
@@ -109,11 +108,11 @@
                   <p class="card-text">DESCRIPTIVE TEXT.</p>
                   <a href="#" class="card-link">Click Here for more info</a>
                </div>
-            </div>
+
          </div>
          <!-- second card -->
          <div class="card border-light mb-3" style="max-width: 20rem;">
-            <div class="card-header">Hotel Name</div>
+            <div class="card-header" id="hotelcard1">Hotel Name</div>
             <img
                src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
                class="d-block w-100" alt="">
@@ -123,10 +122,10 @@
                <a href="#" class="card-link">Click Here for more info</a>
             </div>
          </div>
-         </div>
+
          <!-- third card -->
          <div class="card border-light mb-3" style="max-width: 20rem;">
-            <div class="card-header">Hotel Name</div>
+            <div class="card-header" id="hotelcard2">Hotel Name</div>
             <img
                src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
                class="d-block w-100" alt="">
@@ -135,11 +134,10 @@
                <p class="card-text">DESCRIPTIVE TEXT.</p>
                <a href="#" class="card-link">Click Here for more info</a>
             </div>
-         </div>
          </div>
          <!-- forth card -->
          <div class="card border-light mb-3" style="max-width: 20rem;">
-            <div class="card-header">Hotel Name</div>
+            <div class="card-header" id="hotelcard3">Hotel Name</div>
             <img
                src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
                class="d-block w-100" alt="">
@@ -148,20 +146,22 @@
                <p class="card-text">DESCRIPTIVE TEXT.</p>
                <a href="#" class="card-link">Click Here for more info</a>
             </div>
-         </div>
          </div>
          <!-- fifth card -->
          <div class="card border-light mb-3" style="max-width: 20rem;">
-            <div class="card-header">Hotel Name</div>
+            <div class="card-header" id="hotelcard4">Hotel Name</div>
             <img
                src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
                class="d-block w-100" alt="">
-            <div class="card-body">
-               <h4 class="card-title">Description</h4>
-               <p class="card-text">DESCRIPTIVE TEXT.</p>
-               <a href="#" class="card-link">Click Here for more info</a>
+               <div class="card-body">
+                  <h4 class="card-title" id="description">Description</h4>
+                  
+                  <p class="card-text" id="details">The hotel has a spa and a restaurant</p>
+                  <p class="card-text" id="details">address</p>
+                  <p class="card-text" id="details">price per night/full amount</p>
+
+               <a href="#" class="card-link" id="card-link">Click Here for more info</a>
             </div>
-         </div>
          </div>
       </section>
 
@@ -214,8 +214,9 @@
          </ul>
       </footer>
    </main>
+   <!-- MomentJS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
    <script src="./assets/js/script.js"></script>
-   
 </body>
 
 </html>

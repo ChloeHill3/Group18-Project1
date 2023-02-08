@@ -39,7 +39,6 @@ document.querySelector("#search-button").addEventListener("click", function (eve
 });  //------------end of the main parts 
 
 
-
 function dataToCarousel(params) {
    // if
    console.log("data from hotel obj", params)
@@ -47,7 +46,7 @@ function dataToCarousel(params) {
    for (let i = 0; i < 4; i++) {
       let hotelCardName = "hotelCard" + i;
       console.log(hotelCardName);
-      //console.log(params[i])
+      console.log(params[i+k].url)
       // console.log(params[i].hotel_name);
       document.getElementById(hotelCardName+"name").textContent = params[i+k].hotel_name;
       document.getElementById(hotelCardName+"details").textContent ="Review score:"+params[i+k].review_score+" Check In at "+params[i+k].checkin+ " "+"Check Out at "+params[i+k].checkout;
@@ -60,7 +59,6 @@ function dataToCarousel(params) {
       imgEl.setAttribute("src",imgUrl);
       document.getElementById(hotelCardName+"link").href = params[i+k].url;
      
-
    }
 
 
@@ -92,6 +90,7 @@ function citySearch(cityName, startDate, endDate) {
             countries[i] = responseData[i].country;
             destinationId[i] = responseData[i].dest_id;
          }
+         // console.log("country "+countries,"destination Id"+destinationId);
          // --------call for the 2-nd request
          destId = destinationId[1];
          bookingSearch(destId, startDate, endDate)
@@ -116,7 +115,7 @@ function bookingSearch(dest, startDate, endDate) {
 
          for (let i = 0; i < responseData.result.length; i++) {
 
-            // ======= data in object form
+                 // ======= data in object form
             hotelDataOBJ[i] =
             {
                hotel_name: responseData.result[i].hotel_name, address: (responseData.result[i].address + ", " + responseData.result[i].zip),

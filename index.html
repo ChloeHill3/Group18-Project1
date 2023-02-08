@@ -5,222 +5,228 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>Travel-Xperience Home</title>
    <link rel="stylesheet" href="./assets/css/style.css">
    <!--Added the css bootstrap link-->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <!-- added google fonts so we can have different font styles -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Dosis&family=MuseoModerno:wght@300&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
-   <div>
-      <!--gave a class of header to the div containing the nav bar-->
-      <div class="header">
-        <!-- added nav bar -->
-        <!--deleted the class of dark from nav bar so that i can give a background image to the header-->
-        <!--added a logo to the nav-->
-        <nav class="navbar">
-          <img id="logo" src="./assets/images/travelLogo.png" alt="plane around the globe"/>
-           <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="navbar-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-link" href="#">Attractions</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-link" href="#">Contact</a>
-            </li>
-           </ul>
-        </nav>
-      </div>
-      <!-- START OF THE SEARCH -->
+   <!--gave a class of header to the div containing the nav bar, fixed navbar to top-->
+   <!--deleted the class of dark from nav bar so that i can give a background image to the header-->
+   <!--added a logo to the nav-->
+   <div class="header sticky-top">
+      <!-- added nav bar, edited travel-experience colors and styles -->
+      <nav class="navbar navbar-expand-lg">
+         <div class="container-fluid mr-auto">
+            <div id="logo-div"><img id="logo" src="./assets/images/Blue Orange Flight Destination Travel Agency Logo.png" alt="plane around the globe"></div>
+            <ul class="navbar-nav ml-auto ">
+               <li class="nav-item ">
+                  <a class="nav-link" href="#">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+               </li>
+               <!--removed the attractions from the nav links-->
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+   </div>
+   <main>
+      <!-- added hero section for viewers to enjoy and find their next adventure -->
+
+      <section class="hero"></section>
+      <section class="text-center booknow" id="page-top">
+         <h4>Memories that last a lifetime,
+            Book your next adventure.
+         </h4>
+      </section>
       <!-- added class to section "search-input" -->
       <section id="search-results-hotel">
-        <h2 id="center">Get ready for your next adventure</h2>
-        <!--have put the search fields into a form element-->
-        <div id="form-div">
-          <form>
+         <hr class="hr">
+         <!--have put the search fields into a form element-->
+         <form id="form-div">
             <!--deleted the h2 and added a label for the city input-->
             <label for="search-input">Search city:</label>
-            <input
-              class="city-search"
-              type="text"
-              id="search-input"
-              placeholder="London"
-            />
-            <br />
+            <input class="city-search" type="text" id="search-input" placeholder="Where are you going?" />
+
             <!--deleted the div with a class of label and added a label element-->
             <label for="start-date">Check-in:</label>
-            <input
-              class="city-search"
-              type="date"
-              id="start-date"
-              placeholder="Start date"
-            />
-            <br />
+            <input class="city-search" type="date" id="start-date" placeholder="Start date" />
+
             <!--deleted the div with a class of label and added a label element-->
             <label for="end-date">Check-out:</label>
-            <input
-              class="city-search"
-              type="date"
-              id="end-date"
-              placeholder="End date"
-            />
-            <br />
+            <input class="city-search" type="date" id="end-date" placeholder="End date" />
+
             <!--input for number of rooms, adults, children-->
+            <hr class="hr">
+
             <label for="adults">Number of Adults:</label>
-            <input
-              type="number"
-              id="adults"
-              name="adults"
-              min="1"
-              max="10"
-              value="1"
-              required
-            />
-            <br />
+            <input type="number" id="adults" name="adults" min="1" max="10" value="1" required>
+
             <label for="children">Number of Children:</label>
-            <input
-              type="number"
-              id="children"
-              name="children"
-              min="0"
-              max="10"
-              value="0"
-              required
-            />
-            <br />
+            <input type="number" id="children" name="children" min="0" max="10" value="0" required>
+
             <label for="rooms">Number of Rooms:</label>
-            <input
-              type="number"
-              id="rooms"
-              name="rooms"
-              min="1"
-              max="5"
-              value="1"
-              required
-            />
-            <br />
-            <button
-              type="submit"
-              class="btn search-button"
-              id="search-button"
-              aria-label="submit search"
-              style="background-color: rgb(37, 107, 176)"
-            >
-              Search
+            <input type="number" id="rooms" name="rooms" min="1" max="5" value="1" required>
+            <button type="submit" class="btn btn-info btn-md search-button" id="search-button"
+               aria-label="submit search">
+               Search
             </button>
-          </form>
-        </div>
+            <div class="hide-popup">Wrong Dates Entered, Please Try Again!</div>
+         </form>
+         <hr class="hr">
+         <!--here starts the carousel for displaying the hotel results/ after the title-->
+      </section>
+      <!--changed id to class as it needs to be unique to one element-->
+      <section id="carousel" class="cards carousel-slide">
+         <h2 class="heading">Hotel Results</h2>
       </section>
 
-      <!-- END OF THE SEARCH -->
-      <div id="carousel" class="carousel slide">
-        <div id="carousel-item active">
-          <h2 class="heading">Hotel Results</h2>
+      <!-- added break above so it looks cleaner  -->
+      <section class="cards">
+        <!-- first card -->
+            <div class="card border-light mb-3" style="max-width: 20rem;">
+               <div class="card-header" id="hotelCard0name">Hotel Name</div>
+               <img id="hotelCard0img" src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
+                  class="d-block w-100" alt="first hotel">
+                  <div class="card-body">
+                     <h4 class="card-title" id="hotelCard0description">Description</h4>
+                     <p class="card-text" id="hotelCard0details">The hotel has a spa and a restaurant</p>
+                     <p class="card-text" id="hotelCard0rating">Rating</p>
+                     <p class="card-text" id="hotelCard0address">Address</p>
+                     <p class="card-text" id="hotelCard0price">Price per night/Full amount</p>
+                     <a href="#" class="card-link" id="hotelCard0link">Click Here for more info</a>
+                 </div>
+            </div>
 
-
-          <!-- HOTEL CARD 0 -->
-        <div class="card border-light mb-3" style="max-width: 20rem;">
-          <div class="card-header" id="hotelCard0name">Hotel Name</div>
-          <img id="hotelCard0img" src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
-             class="d-block w-100" alt="">
-             <div class="card-body">
-                <h4 class="card-title" id="hotelCard0description">Description</h4>
-                <p class="card-text" id="hotelCard0details">The hotel has a spa and a restaurant</p>
-                <p class="card-text" id="hotelCard0address">address</p>
-                <p class="card-text" id="hotelCard0price">price per night/full amount</p>
-                <a href="#" class="card-link" id="hotelCard0link">Click Here for more info</a>
-            </div>
-       </div>
-       
-                <!-- HOTEL CARD 1 -->
-        <div class="card border-light mb-3" style="max-width: 20rem;">
-          <div class="card-header" id="hotelCard1name">Hotel Name</div>
-          <img id="hotelCard1img" src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
-             class="d-block w-100" alt="">
-             <div class="card-body">
-                <h4 class="card-title" id="hotelCard1description">Description</h4>
-                <p class="card-text" id="hotelCard1details">The hotel has a spa and a restaurant</p>
-                <p class="card-text" id="hotelCard1address">address</p>
-                <p class="card-text" id="hotelCard1price">price per night/full amount</p>
-                <a href="#" class="card-link" id="hotelCard1link">Click Here for more info</a>
-            </div>
-       </div>
-        <!-- HOTEL CARD 2 -->
-        <div class="card border-light mb-3" style="max-width: 20rem;">
-          <div class="card-header" id="hotelCard2name">Hotel Name</div>
-          <img id="hotelCard2img" src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
-             class="d-block w-100" alt="">
-             <div class="card-body">
-                <h4 class="card-title" id="hotelCard2description">Description</h4>
-                <p class="card-text" id="hotelCard2details">The hotel has a spa and a restaurant</p>
-                <p class="card-text" id="hotelCard2address">address</p>
-                <p class="card-text" id="hotelCard2price">price per night/full amount</p>
-                <a href="#" class="card-link" id="hotelCard2link">Click Here for more info</a>
-            </div>
-       </div>
-       <!-- HOTEL CARD 3 -->
-       <div class="card border-light mb-3" style="max-width: 20rem;">
-        <div class="card-header" id="hotelCard3name">Hotel Name</div>
-        <img id="hotelCard3img" src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
-           class="d-block w-100" alt="">
-           <div class="card-body">
-              <h4 class="card-title" id="hotelCard3description">Description</h4>
-              <p class="card-text" id="hotelCard3details">The hotel has a spa and a restaurant</p>
-              <p class="card-text" id="hotelCard3address">address</p>
-              <p class="card-text" id="hotelCard3price">price per night/full amount</p>
-              <a href="#" class="card-link" id="hotelCard3link">Click Here for more info</a>
+         <!-- second card -->
+            <div class="card border-light mb-3" style="max-width: 20rem;">
+              <div class="card-header" id="hotelCard1name">Hotel Name</div>
+              <img id="hotelCard1img" src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
+                class="d-block w-100" alt="first hotel">
+                <div class="card-body">
+                    <h4 class="card-title" id="hotelCard1description">Description</h4>
+                    <p class="card-text" id="hotelCard1details">The hotel has a spa and a restaurant</p>
+                    <p class="card-text" id="hotelCard1rating">Rating</p>
+                    <p class="card-text" id="hotelCard1address">Address</p>
+                    <p class="card-text" id="hotelCard1price">Price per night/Full amount</p>
+                    <a href="#" class="card-link" id="hotelCard1link">Click Here for more info</a>
+                </div>
           </div>
-        </div>
+        
+         <!-- third card -->
 
-      </div>
-      <!--added  a div with a class of events to display for the user-->
-      <div class="events">
-        <h2 id=" events">While you're there...</h2>
-        <h5 class="card-name">Events</h5>
-        <div class="events-card">
-           <div class="card-body">
-             <h5 class="event-title">Event title</h5>
-             <p class="event-text">"With supporting text below as a natural lead-in to additional content".</p>
-           </div>
-           <div class="card-body">
-             <h5 class="event-title">Event title</h5>
-             <p class="event-text">"With supporting text below as a natural lead-in to additional content".</p>
-           </div>
-           <div class="card-body">
-             <h5 class="event-title">Event title</h5>
-             <p class="event-text">"With supporting text below as a natural lead-in to additional content".</p>
-           </div>
-         </div>
-         <a href="#" id="more events"class="btn btn-primary">See more</a>
-      </div>
-      <!--use the class HIDDEN to hide the div containing the rest of the events on the page-->
-        <div class="events-card" class="hidden">
-           <div class="card-body">
-             <h5 class="event-title">Event title</h5>
-             <p class="event-text">"With supporting text below as a natural lead-in to additional content".</p>
-           </div>
-           <div class="card-body">
-             <h5 class="event-title">Event title</h5>
-             <p class="event-text">"With supporting text below as a natural lead-in to additional content".</p>
-           </div>
-           <div class="card-body">
-             <h5 class="event-title">Event title</h5>
-             <p class="event-text">"With supporting text below as a natural lead-in to additional content".</p>
+            <div class="card border-light mb-3" style="max-width: 20rem;">
+              <div class="card-header" id="hotelCard2name">Hotel Name</div>
+              <img id="hotelCard2img" src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
+                class="d-block w-100" alt="first hotel">
+                <div class="card-body">
+                    <h4 class="card-title" id="hotelCard2description">Description</h4>
+                    <p class="card-text" id="hotelCard2details">The hotel has a spa and a restaurant</p>
+                    <p class="card-text" id="hotelCard2rating">Rating</p>
+                    <p class="card-text" id="hotelCard2address">Address</p>
+                    <p class="card-text" id="hotelCard2price">Price per night/Full amount</p>
+                    <a href="#" class="card-link" id="hotelCard2link">Click Here for more info</a>
+                </div>
+          </div>
+            
+         <!-- forth card -->
+
+            <div class="card border-light mb-3" style="max-width: 20rem;">
+              <div class="card-header" id="hotelCard3name">Hotel Name</div>
+              <img id="hotelCard3img" src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
+                class="d-block w-100" alt="first hotel">
+                <div class="card-body">
+                    <h4 class="card-title" id="hotelCard3description">Description</h4>
+                    <p class="card-text" id="hotelCard3details">The hotel has a spa and a restaurant</p>
+                    <p class="card-text" id="hotelCard3rating">Rating</p>
+                    <p class="card-text" id="hotelCard3address">Address</p>
+                    <p class="card-text" id="hotelCard3price">Price per night/Full amount</p>
+                    <a href="#" class="card-link" id="hotelCard3link">Click Here for more info</a>
+                </div>
+          </div>
+         
+         <!-- fifth card -->
+         <div class="card border-light mb-3" style="max-width: 20rem;">
+            <div class="card-header" id="hotelcard4">Hotel Name</div>
+            <img id="hotelCard4img"
+               src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
+               class="d-block w-100" alt="5th hotel">
+               <div class="card-body" >
+                  <h4 class="card-title" id="hotelCard4description" id="description">Description</h4>
+                  
+                  <p class="card-text" id="hotelCard4details" id="details">The hotel has a spa and a restaurant</p>
+                  <p class="card-text" id="hotelCard4rating">Rating</p>
+                  <p class="card-text" id="hotelCard4address" id="details">Address</p>
+                  <p class="card-text" id="hotelCard4price" id="details">Price per night/Full amount</p>
+
+               <a href="#" class="card-link" id="hotelcard4link" id="card-link">Click Here for more info</a>
             </div>
          </div>
-         <a href="#" id="more events"class="btn btn-primary">See more</a>
-    </div>
+      </section>
 
-   
-   
-
-
+      <!--added  a div with a class of events to display for the user-->
+      <section class="events">
+         <h2 id="tag-events">While you're there...</h2>
+         <h5 class="event-heading">Events</h5>
+         <div class="events-card">
+            <div class="card-body">
+               <h5 class="event-title">Event title</h5>
+               <p class="event-text">"With supporting text below as a natural lead-in to additional content".</p>
+            </div>
+            <div class="card-body">
+               <h5 class="event-title">Event title</h5>
+               <p class="event-text">"With supporting text below as a natural lead-in to additional content".</p>
+            </div>
+            <div class="card-body">
+               <h5 class="event-title">Event title</h5>
+               <p class="event-text">"With supporting text below as a natural lead-in to additional content".</p>
+            </div>
+         </div>
+         <article>
+         <a href="#" id="more-events" class="btn btn-primary center">See more</a></article>
+         </div>
+         <!--use the class HIDDEN to hide the div containing the rest of the events on the page-->
+         <div class="events-card" class="hidden">
+            <div class="card-body">
+               <h5 class="event-title">Event title</h5>
+               <p class="event-text">"With supporting text below as a natural lead-in to additional content".</p>
+            </div>
+            <div class="card-body">
+               <h5 class="event-title">Event title</h5>
+               <p class="event-text">"With supporting text below as a natural lead-in to additional content".</p>
+            </div>
+            <div class="card-body">
+               <h5 class="event-title">Event title</h5>
+               <p class="event-text">"With supporting text below as a natural lead-in to additional content".</p>
+            </div>
+         </div>
+         <article>
+            <a href="#" id="more-events" class="btn btn-primary center">See more</a></article>
+      </section>
+      <!--added a footer to the page -->
+      <footer id="footer">
+         <ul id="footer-links">
+            <!--connected the footer links to sections on page-->
+            <li><a href="#form-div">Book now</a></li>
+            <li><a href="#carousel">See hotels</a></li>
+            <li><a href="#events">Events</a></li>
+         </ul>
+      </footer>
+   </main>
+   <!-- MomentJS -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
    <script src="./assets/js/script.js"></script>
 </body>

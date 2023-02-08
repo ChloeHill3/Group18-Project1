@@ -261,7 +261,7 @@ article {
    visibility: hidden;
 }
 
-/*search button*/
+/*search button centered*/
 .button-search {
    display: flex;
    justify-content: center;

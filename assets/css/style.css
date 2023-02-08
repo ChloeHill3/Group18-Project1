@@ -81,7 +81,7 @@ section {
    display: flex;
    justify-content: center;
    align-items: center;
-   background-image: url(/assets/images/memories\ that\ last\ a\ lifetime\ \(1\).svg);
+   background-image: url("./assets/images/hero-banner.svg");
    height: 250px;
    background-position: center;
    background-repeat: no-repeat;
@@ -256,11 +256,9 @@ article {
    -ms-transform: translate(-50%, -50%);
    transform: translate(-50%, -50%);
 }
-/* hide the popup with the warning msg for wrong dates*/
 .hide-popup {
    visibility: hidden;
 }
-
 /*search button centered*/
 .button-search {
    display: flex;

@@ -256,6 +256,13 @@ article {
    -ms-transform: translate(-50%, -50%);
    transform: translate(-50%, -50%);
 }
+/* hide the popup with the warning msg for wrong dates*/
 .hide-popup {
    visibility: hidden;
+}
+
+/*search button centered*/
+.button-search {
+   display: flex;
+   justify-content: center;
 }

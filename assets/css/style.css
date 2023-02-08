@@ -81,7 +81,7 @@ section {
    display: flex;
    justify-content: center;
    align-items: center;
-   background-image: url("./assets/images/memories that last a lifetime (1).svg");
+   background-image: url("./assets/images/hero-banner.svg");
    height: 250px;
    background-position: center;
    background-repeat: no-repeat;
@@ -258,4 +258,9 @@ article {
 }
 .hide-popup {
    visibility: hidden;
+}
+/*search button centered*/
+.button-search {
+   display: flex;
+   justify-content: center;
 }

@@ -2,6 +2,7 @@ var today = (moment().format("YYYY-MM-DD"));
 let destId;
 let cityName;
 let countryName;
+let eventCityName;
 let countries = [];
 let destinationId = [];
 let hotelData = [];
@@ -26,7 +27,9 @@ document.querySelector("#search-button").addEventListener("click", function (eve
    errorText = "";
    var cityName = document.getElementById("search-input").value;
    if (cityName !== "") {
-
+      
+      eventCityName=cityName;
+      console.log("event City"+eventCityName," City Name "+cityName)
       citySearch(cityName, startDate, endDate)
 
       // countryName = countries[0];
@@ -86,6 +89,7 @@ function citySearch(cityName, startDate, endDate) {
       .then(data => {
          let responseData = data;
          console.log("cityData, for id: ", responseData);
+         
          for (let i = 0; i < 5; i++) {
             countries[i] = responseData[i].country;
             destinationId[i] = responseData[i].dest_id;
@@ -131,10 +135,10 @@ function bookingSearch(dest, startDate, endDate) {
 
 
          }
-         // console.log(hotelData);
+         console.log("names in city search",eventCityName, startDate, endDate);
 
          // fetch on ticketmaster
-         events(cityName, startDate, endDate);
+         events(eventCityName, startDate, endDate);
          
       }).catch(err => console.log(err))
 
@@ -142,13 +146,17 @@ function bookingSearch(dest, startDate, endDate) {
    // promiseCheck();
 }// ---------------end of the city function
 
-function events(cityName, startDate, endDate) {
-   queryURLEvents = "https://app.ticketmaster.com/discovery/v2/events.json?city=sheffield&size=200&apikey=hQFb4tXqGqiHrogU7XknBuIpl0lYAK4h"
+function events(city, start, end) {
+
+   console.log(city, start, end);
+   // num.toString()&startDateTime=2023-02-10
+   queryURLEvents = "https://app.ticketmaster.com/discovery/v2/events.json?city="+city+"&size=200&apikey=hQFb4tXqGqiHrogU7XknBuIpl0lYAK4h";
+   // queryURLEvents = "https://app.ticketmaster.com/discovery/v2/events.json?city=sheffield&size=200&apikey=hQFb4tXqGqiHrogU7XknBuIpl0lYAK4h";
    fetch(queryURLEvents)
       .then(response => response.json())
       .then(data => {
          let eventsData = data;
-         console.log(cityName,startDate,endDate)
+         // console.log(cityName,startDate,endDate)
          for (let i = 0; i < eventsData._embedded.events.length; i++) {
 
             EventsDataOBJ[i] =
@@ -159,7 +167,7 @@ function events(cityName, startDate, endDate) {
             };
          }
          console.log("hotel Data before render", hotelDataOBJ);
-         console.log("events Data before render", EventsDataOBJ)
+         console.log("events Data before render", EventsDataOBJ);
 
          dataToCarousel(hotelDataOBJ)
       }); 

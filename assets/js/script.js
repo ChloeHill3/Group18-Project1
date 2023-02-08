@@ -2,6 +2,7 @@ var today = (moment().format("YYYY-MM-DD"));
 let destId;
 let cityName;
 let countryName;
+let eventCityName;
 let countries = [];
 let destinationId = [];
 let hotelData = [];
@@ -26,7 +27,9 @@ document.querySelector("#search-button").addEventListener("click", function (eve
    errorText = "";
    var cityName = document.getElementById("search-input").value;
    if (cityName !== "") {
-
+      
+      eventCityName=cityName;
+      console.log("event City"+eventCityName," City Name "+cityName)
       citySearch(cityName, startDate, endDate)
 
       // countryName = countries[0];
@@ -39,33 +42,6 @@ document.querySelector("#search-button").addEventListener("click", function (eve
 });  //------------end of the main parts 
 
 
-// ======= Promise function 
-// function promiseCheck() {
-//    let p1 = new Promise((resolve,reject)=>{
-//       if (countries.length>0){
-//          resolve(1);
-//       }
-//    })
-//    let p2 = new Promise((resolve,reject)=>{
-//       if (hotelDataOBJ.length>0){
-//          resolve(1);
-//       }
-//    })
-//    let p3 = new Promise((resolve,reject)=>{
-//       if (EventsDataOBJ.length>0){
-//          resolve(1);
-//       }
-//   })
-//   Promise.allSettled([p1,p2,p3])
-//   .then((response) =>{
-//      dataToCarousel()
-//    })
-
-
-// }
-// =======End of the promise function    
-
-
 function dataToCarousel(params) {
    // if
    console.log("data from hotel obj", params)
@@ -73,18 +49,19 @@ function dataToCarousel(params) {
    for (let i = 0; i < 4; i++) {
       let hotelCardName = "hotelCard" + i;
       console.log(hotelCardName);
-      console.log(params[i])
-      console.log(params[i].hotel_name);
-      document.getElementById("hotelCard" + i).textContent = params[k].hotel_name;
-
-      // document.querySelector(hotelCardName+"img").textContent=hotelDataOBJ[k].hotel_name;
-
-      // let iconUrl="http://openweathermap.org/img/wn/"+responseData.weather[0].icon+"@2x.png"
-      // iconEl.setAttribute("src",iconUrl);
-      // currentEl.appendChild(iconEl);
-
-      // buttonName="#historyBtn"+[i]
-      //  document.querySelector(buttonName).textContent=searchedCities[i];
+      console.log(params[i+k].url)
+      // console.log(params[i].hotel_name);
+      document.getElementById(hotelCardName+"name").textContent = params[i+k].hotel_name;
+      document.getElementById(hotelCardName+"details").textContent ="Review score:"+params[i+k].review_score+" Check In at "+params[i+k].checkin+ " "+"Check Out at "+params[i+k].checkout;
+      document.getElementById(hotelCardName+"address").textContent = params[i+k].address;
+      // details
+      document.getElementById(hotelCardName+"price").textContent = ("price per night "+params[i+k].currency+" "+ Math.floor(params[i+k].price_per_night*100)/100+" /Full amount "+params[i+k].currency+" "+Math.floor(params[i+k].total_amount*100)/100 );
+      document.getElementById(hotelCardName+"address").textContent = params[i+k].address;
+      let imgEl=document.getElementById(hotelCardName+"img")
+      let imgUrl=params[i+k].photo
+      imgEl.setAttribute("src",imgUrl);
+      document.getElementById(hotelCardName+"link").href = params[i+k].url;
+     
    }
 
 
@@ -112,6 +89,7 @@ function citySearch(cityName, startDate, endDate) {
       .then(data => {
          let responseData = data;
          console.log("cityData, for id: ", responseData);
+         
          for (let i = 0; i < 5; i++) {
             countries[i] = responseData[i].country;
             destinationId[i] = responseData[i].dest_id;
@@ -141,20 +119,10 @@ function bookingSearch(dest, startDate, endDate) {
 
          for (let i = 0; i < responseData.result.length; i++) {
 
-            // hotelData[i * 10 + 0] = responseData.result[i].hotel_name;
-            // hotelData[i * 10 + 1] = responseData.result[i].address + "," + responseData.result[i].zip;
-            // hotelData[i * 10 + 2] = responseData.result[i].checkin.from;
-            // hotelData[i * 10 + 3] = responseData.result[i].checkout.until;
-            // hotelData[i * 10 + 4] = responseData.result[i].composite_price_breakdown.gross_amount_per_night.value;
-            // hotelData[i * 10 + 5] = responseData.result[i].composite_price_breakdown.gross_amount_per_night.currency;
-            // hotelData[i * 10 + 6] = responseData.result[i].composite_price_breakdown.net_amount.value;
-            // hotelData[i * 10 + 7] = "rev. score" + responseData.result[i].review_score;
-            // hotelData[i * 10 + 8] = responseData.result[i].max_photo_url;
-            // hotelData[i * 10 + 9] = responseData.result[i].url;
-            // ======= data in object form
+                 // ======= data in object form
             hotelDataOBJ[i] =
             {
-               hotel_name: responseData.result[i].hotel_name, address: (responseData.result[i].address + "," + responseData.result[i].zip),
+               hotel_name: responseData.result[i].hotel_name, address: (responseData.result[i].address + ", " + responseData.result[i].zip),
                checkin: responseData.result[i].checkin.from, checkout: responseData.result[i].checkout.until,
                price_per_night: responseData.result[i].composite_price_breakdown.gross_amount_per_night.value,
                currency: responseData.result[i].composite_price_breakdown.gross_amount_per_night.currency,
@@ -167,10 +135,10 @@ function bookingSearch(dest, startDate, endDate) {
 
 
          }
-         // console.log(hotelData);
+         console.log("names in city search",eventCityName, startDate, endDate);
 
          // fetch on ticketmaster
-         events(cityName, startDate, endDate);
+         events(eventCityName, startDate, endDate);
          
       }).catch(err => console.log(err))
 
@@ -178,13 +146,17 @@ function bookingSearch(dest, startDate, endDate) {
    // promiseCheck();
 }// ---------------end of the city function
 
-function events(cityName, startDate, endDate) {
-   queryURLEvents = "https://app.ticketmaster.com/discovery/v2/events.json?city=sheffield&size=200&apikey=hQFb4tXqGqiHrogU7XknBuIpl0lYAK4h"
+function events(city, start, end) {
+
+   console.log(city, start, end);
+   // num.toString()&startDateTime=2023-02-10
+   queryURLEvents = "https://app.ticketmaster.com/discovery/v2/events.json?city="+city+"&size=200&apikey=hQFb4tXqGqiHrogU7XknBuIpl0lYAK4h";
+   // queryURLEvents = "https://app.ticketmaster.com/discovery/v2/events.json?city=sheffield&size=200&apikey=hQFb4tXqGqiHrogU7XknBuIpl0lYAK4h";
    fetch(queryURLEvents)
       .then(response => response.json())
       .then(data => {
          let eventsData = data;
-         console.log(cityName,startDate,endDate)
+         // console.log(cityName,startDate,endDate)
          for (let i = 0; i < eventsData._embedded.events.length; i++) {
 
             EventsDataOBJ[i] =
@@ -195,7 +167,7 @@ function events(cityName, startDate, endDate) {
             };
          }
          console.log("hotel Data before render", hotelDataOBJ);
-         console.log("events Data before render", EventsDataOBJ)
+         console.log("events Data before render", EventsDataOBJ);
 
          dataToCarousel(hotelDataOBJ)
       }); 

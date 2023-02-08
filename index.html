@@ -74,31 +74,29 @@
 
             <label for="adults">Number of Adults:</label>
             <input type="number" id="adults" name="adults" min="1" max="10" value="1" required>
-
-            <label for="children">Number of Children:</label>
-            <input type="number" id="children" name="children" min="0" max="10" value="0" required>
-
+            <!--git rid of the children box-->
             <label for="rooms">Number of Rooms:</label>
             <input type="number" id="rooms" name="rooms" min="1" max="5" value="1" required>
+            <div class="button-search">
             <button type="submit" class="btn btn-info btn-md search-button" id="search-button"
                aria-label="submit search">
                Search
             </button>
+         </div>
             <div class="hide-popup">Wrong Dates Entered, Please Try Again!</div>
          </form>
          <hr class="hr">
          <!--here starts the carousel for displaying the hotel results/ after the title-->
       </section>
       <!--changed id to class as it needs to be unique to one element-->
-      <section id="carousel" class="cards carousel-slide">
+      <section id="carousel" class="cards carousel-slide slider">
          <h2 class="heading">Hotel Results</h2>
       </section>
 
       <!-- added break above so it looks cleaner  -->
       <section class="cards">
-         <div id="carousel-item active">
             <div class="card border-light mb-3" style="max-width: 20rem;">
-               <div class="card-header" id="hotelCard0">Hotel Name</div>
+               <div class="card-header" id="hotelCard0name">Hotel Name</div>
                <img id="hotelCard0img" src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
                   class="d-block w-100" alt="first hotel">
                   <div class="card-body">
@@ -110,11 +108,9 @@
                      <a href="#" class="card-link" id="hotelcard0link">Click Here for more info</a>
                  </div>
             </div>
-
-         </div>
          <!-- second card -->
          <div class="card border-light mb-3" style="max-width: 20rem;">
-            <div class="card-header" id="hotelcard1">Hotel Name</div>
+            <div class="card-header" id="hotelcard1name">Hotel Name</div>
             <img id="hotelCard1img"
                src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
                class="d-block w-100" alt="second hotel">
@@ -130,7 +126,7 @@
 
          <!-- third card -->
          <div class="card border-light mb-3" style="max-width: 20rem;">
-            <div class="card-header" id="hotelcard2">Hotel Name</div>
+            <div class="card-header" id="hotelcard2name">Hotel Name</div>
             <img id="hotelCard2img"
                src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
                class="d-block w-100" alt="third hotel">
@@ -145,7 +141,7 @@
          </div>
          <!-- forth card -->
          <div class="card border-light mb-3" style="max-width: 20rem;">
-            <div class="card-header" id="hotelcard3">Hotel Name</div>
+            <div class="card-header" id="hotelcard3name">Hotel Name</div>
             <img id="hotelCard3img"
                src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
                class="d-block w-100" alt="4th hotel">
@@ -160,7 +156,7 @@
          </div>
          <!-- fifth card -->
          <div class="card border-light mb-3" style="max-width: 20rem;">
-            <div class="card-header" id="hotelcard4">Hotel Name</div>
+            <div class="card-header" id="hotelcard4name">Hotel Name</div>
             <img id="hotelCard4img"
                src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
                class="d-block w-100" alt="5th hotel">

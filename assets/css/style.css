@@ -122,6 +122,9 @@ input {
    width: auto;
    height: 99.5%;
    margin: 15px 25px 25px 25px;
+   /*centered the hotel results heading*/
+   display: flex;
+   justify-content: center;
 }
 
 

@@ -60,6 +60,7 @@ section {
 .navbar a {
    display: inline-flex;
    color: #000000;
+
 }
 
 .navbar a:hover {
@@ -314,7 +315,7 @@ label {
 }
 /*sorted the cards*/
 .events-body{
-   border-style: dotted;
+   border-style: dotted rgb(135, 135, 135);
    background-image:linear-gradient(rgb(224, 199, 220), rgb(201, 189, 247));
 }
 .footer-heading {
@@ -356,3 +357,17 @@ margin: 0px;
 padding: 0px;
 overflow-x: hidden;
 }
+
+.event-img-div img {
+   margin: 0 auto auto auto;
+   width: 10rem;
+   height: 7rem;
+}
+
+.hotel-img-div img {
+   margin: 0 auto;
+   width: 11rem;
+   height: 10rem;
+}
+
+

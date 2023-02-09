@@ -1,13 +1,15 @@
 /* Global Styles */
-.heading {
+.heading, #events {
    font-family: 'Quicksand', sans-serif;
    font-size: 30px;
+   font-weight: bold;
 }
 
 h3,
 h4,
 h5 {
    font-family: 'Quicksand', sans-serif;
+   font-weight: bold;
 }
 
 label,
@@ -17,7 +19,10 @@ p {
    font-family: 'Quicksand', sans-serif;
 }
 
-
+.nav-link {
+   font-weight: bold;
+   color: #28538f;
+}
 .nav-item a {
    font-family: 'Quicksand', sans-serif;
 }
@@ -55,8 +60,6 @@ section {
 .navbar a {
    display: inline-flex;
    color: #000000;
-   border-bottom: #3671C3 solid 2px;
-
 }
 
 .navbar a:hover {
@@ -66,8 +69,10 @@ section {
 
 /* Search/Form Section Styles  */
 #search-button {
-   margin: 10px;
-   border-radius: 2px;
+   margin: 2rem;
+   padding: 0.2rem;
+   width: 7rem;
+   height: 3rem;
    background-color: #3671C3;
    border: none;
    border-radius: 5px;
@@ -81,8 +86,8 @@ section {
    display: flex;
    justify-content: center;
    align-items: center;
-   background-image: url("./assets/images/hero-banner.svg");
-   height: 250px;
+   background-image: url("/assets/images/hero-banner.svg");
+   height: 220px;
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -111,7 +116,13 @@ input {
 #search-results-hotel {
    display: flex;
    justify-content: center;
+   justify-items: center;
    align-items: center;
+   background-image: url(/assets/images/formBkg.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   object-fit: contain;
 }
 
 /* Carousel Styles */
@@ -122,6 +133,9 @@ input {
    width: auto;
    height: 99.5%;
    margin: 15px 25px 25px 25px;
+   /*centered the hotel results heading*/
+   display: flex;
+   justify-content: center;
 }
 
 
@@ -137,7 +151,7 @@ input {
 }
 
 #logo {
-   height: 4.5rem;
+   height: 5rem;
 }
 
 .booknow {
@@ -162,7 +176,7 @@ input {
 
 
 .btn-primary {
-   display: block;
+   display: inline-block;
 }
 
 #tag-events {
@@ -195,12 +209,13 @@ input {
 
 /* Footer Styles */
 footer {
-   background-color: rgb(236, 236, 236);
+   background-color: rgb(176, 171, 171);
    border-radius: 5px;
    padding: 5px;
    width: auto;
    height: 150px;
    margin: 15px 25px 15px 25px;
+   font-weight: bold;
 }
 
 #footer-links {
@@ -220,13 +235,12 @@ footer {
 }
 
 .events-card {
-
    display: flex;
-   justify-content: space-evenly;
+   justify-content: space-around;
    padding: 0.5rem;
    border: 10px solid #e7e7e7;
    border-radius: 5px;
-   height: 250px;
+   height: 20rem;
 }
 
 .hidden {
@@ -234,9 +248,9 @@ footer {
 }
 
 #more-events {
-   height: 50px;
+   height: 3rem;
+   width: 7rem;
    font-family: 'Quicksand', sans-serif;
-   width: 150px;
    background-color: #3671C3;
 
 
@@ -263,4 +277,82 @@ article {
 .button-search {
    display: flex;
    justify-content: center;
+}
+/*input buttons*/
+input {
+   padding: 0.2rem;
+   margin: 0.1rem;
+   border: 2px solid rgb(232, 169, 52);
+   border-radius: 0.4rem;
+}
+/* label input*/
+label {
+   margin: 0.1rem;
+   padding: 0.2rem;
+   font-weight: bold;
+}
+/* */
+#search-results-hotel {
+   height: 12rem;
+}
+
+#form-div {
+   padding-top: 2rem;
+}
+.event-title {
+   padding: 0.2rem; 
+   color: rgb(60, 22, 210);
+   font-weight: bold;
+   font-size: 1.5rem;
+   text-align: center;
+}
+.card-body {
+   text-align: center;
+   margin: 0.3em;
+   padding: 0.2em;
+   background-image:linear-gradient(rgb(233, 244, 249), rgb(189, 233, 249));
+}
+/*sorted the cards*/
+.events-body{
+   border-style: dotted;
+   background-image:linear-gradient(rgb(224, 199, 220), rgb(201, 189, 247));
+}
+.footer-heading {
+   position: relative;
+   left: 1em;
+   top: 0.2em;
+}
+/*added copy sign*/
+#copy {
+   position: relative;
+   top: 4em;
+   left: 45em;
+   font-size:small;
+   font-weight: bolder;
+}
+main {
+   width: 80rem;;
+}
+#moreResults {
+   margin: 2rem;
+   padding: 0.2rem;
+   width: 7rem;
+   height: 3rem;
+   background-color: #8bc5dc;
+   border: none;
+   border-radius: 5px;
+   display: inline-block;
+   text-align: center;
+}
+.moreHotelResults {
+   position: relative;
+   left: 33rem;
+}
+
+html, body {
+width: 100%;
+height: 100%;
+margin: 0px;
+padding: 0px;
+overflow-x: hidden;
 }

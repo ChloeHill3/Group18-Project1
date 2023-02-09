@@ -1,237 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
+   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel-Xperience</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!--Added the css bootstrap link-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- added google fonts so we can have different font styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis&family=MuseoModerno:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montez&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
+   </head>
 
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Travel-Xperience</title>
-   <link rel="stylesheet" href="./assets/css/style.css">
-   <!--Added the css bootstrap link-->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   <!-- added google fonts so we can have different font styles -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Dosis&family=MuseoModerno:wght@300&display=swap"
-      rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-</head>
-
-<body>
-   <!--gave a class of header to the div containing the nav bar, fixed navbar to top-->
-   <!--deleted the class of dark from nav bar so that i can give a background image to the header-->
-   <!--added a logo to the nav-->
-   <div class="header sticky-top">
+   <body>
+    <!--gave a class of header to the div containing the nav bar, fixed navbar to top-->
+    <!--deleted the class of dark from nav bar so that i can give a background image to the header-->
+    <!--added a logo to the nav-->
+    <div class="header sticky-top">
       <!-- added nav bar, edited travel-experience colors and styles -->
       <nav class="navbar navbar-expand-lg">
-         <div class="container-fluid mr-auto">
-            <div id="logo-div"><img id="logo" src="/assets/images/travelLogo.png" alt="plane around the globe"></div>
-            <ul class="navbar-nav ml-auto ">
-               <li class="nav-item ">
-                  <a class="nav-link" href="#">Home</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
-               </li>
-               <!--removed the attractions from the nav links-->
-               <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
-               </li>
-            </ul>
-         </div>
+        <div class="container-fluid mr-auto">
+          <div id="logo-div">
+            <img
+              id="logo"
+              src="/assets/images/travelLogo.png"
+              alt="plane around the globe"
+            />
+          </div>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <!--removed the attractions from the nav links-->
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
       </nav>
-   </div>
-   <main>
+    </div>
+    <main>
       <!-- added hero section for viewers to enjoy and find their next adventure -->
-
       <section class="hero"></section>
       <section class="text-center booknow" id="page-top">
-         <h4>Memories that last a lifetime,
-            Book your next adventure.
-         </h4>
+        <h4>Memories that last a lifetime, Book your next adventure.</h4>
       </section>
       <!-- added class to section "search-input" -->
       <section id="search-results-hotel">
-         <hr class="hr">
-         <!--have put the search fields into a form element-->
-         <form id="form-div">
-            <!--deleted the h2 and added a label for the city input-->
-            <label for="search-input">Search city:</label>
-            <input class="city-search" type="text" id="search-input" placeholder="Where are you going?" />
+        <hr class="hr" />
+        <!--have put the search fields into a form element-->
+        <form id="form-div">
+          <!--deleted the h2 and added a label for the city input-->
+          <label for="search-input">Search city:</label>
+          <input
+            class="city-search"
+            type="text"
+            id="search-input"
+            placeholder="Where are you going?"
+          />
 
-            <!--deleted the div with a class of label and added a label element-->
-            <label for="start-date">Check-in:</label>
-            <input class="city-search" type="date" id="start-date" placeholder="Start date" />
+          <!--deleted the div with a class of label and added a label element-->
+          <label for="start-date">Check-in:</label>
+          <input
+            class="city-search"
+            type="date"
+            id="start-date"
+            placeholder="Start date"
+          />
 
-            <!--deleted the div with a class of label and added a label element-->
-            <label for="end-date">Check-out:</label>
-            <input class="city-search" type="date" id="end-date" placeholder="End date" />
+          <!--deleted the div with a class of label and added a label element-->
+          <label for="end-date">Check-out:</label>
+          <input
+            class="city-search"
+            type="date"
+            id="end-date"
+            placeholder="End date"
+          />
 
-            <!--input for number of rooms, adults, children-->
-            <label for="adults">Number of Adults:</label>
-            <input type="number" id="adults" name="adults" min="1" max="10" value="1" required>
+          <!--input for number of rooms, adults, children-->
+          <label for="adults">Number of Adults:</label>
+          <input
+            type="number"
+            id="adults"
+            name="adults"
+            min="1"
+            max="10"
+            value="1"
+            required
+          />
 
-            <label for="rooms">Number of Rooms:</label>
-            <input type="number" id="rooms" name="rooms" min="1" max="5" value="1" required>
-         
-            <div class="button-search">
-              <button type="submit" class="btn btn-info btn-md search-button" id="search-button"
-                 aria-label="submit search">
-                 Search
-              </button>
-            </div>
-            <div class="hide-popup" id="errorDate">Wrong Dates Entered, Please Try Again!</div>`
-         </form>
-         <hr class="hr">
-         <!--here starts the carousel for displaying the hotel results/ after the title-->
+          <label for="rooms">Number of Rooms:</label>
+          <input
+            type="number"
+            id="rooms"
+            name="rooms"
+            min="1"
+            max="5"
+            value="1"
+            required
+          />
+
+          <div class="button-search">
+            <button
+              type="submit"
+              class="btn btn-info btn-md search-button"
+              id="search-button"
+              aria-label="submit search"
+            >
+              Search
+            </button>
+          </div>
+          <div class="hide-popup" id="errorDate">
+            Wrong Dates Entered, Please Try Again!
+          </div>
+          `
+        </form>
+        <hr class="hr" />
+        <!--here starts the carousel for displaying the hotel results/ after the title-->
       </section>
       <!--changed id to class as it needs to be unique to one element-->
       <section id="carousel" class="cards carousel-slide">
-         <h2 class="heading">Hotel Results</h2>
+        <h2 class="heading">Hotel Results</h2>
       </section>
 
       <!-- added break above so it looks cleaner  -->
       <section class="cards">
         <!-- first card -->
-            <div class="card border-light mb-3" style="max-width: 20rem;">
-               <div class="card-header" id="hotelCard0name">Hotel Name</div>
-               <img id="hotelCard0img" src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
-                  class="d-block w-100" alt="first hotel">
-                  <div class="card-body">
-                     <h4 class="card-title" id="hotelCard0description">Description</h4>
-                     <p class="card-text" id="hotelCard0details">The hotel has a spa and a restaurant</p>
-                     <p class="card-text" id="hotelCard0rating">Rating</p>
-                     <p class="card-text" id="hotelCard0address">Address</p>
-                     <p class="card-text" id="hotelCard0price">Price per night/Full amount</p>
-                     <a target="_blank" href="#" class="card-link" id="hotelCard0link">Click Here for more info</a>
-                     <!-- <a target="_blank" href="#" class="card-link" id="hotelcard3link">Click Here for more info</a> -->
-                 </div>
-            </div>
-
-         <!-- second card -->
-            <div class="card border-light mb-3" style="max-width: 20rem;">
-              <div class="card-header" id="hotelCard1name">Hotel Name</div>
-              <img id="hotelCard1img" src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
-                class="d-block w-100" alt="first hotel">
-                <div class="card-body">
-                    <h4 class="card-title" id="hotelCard1description">Description</h4>
-                    <p class="card-text" id="hotelCard1details">The hotel has a spa and a restaurant</p>
-                    <p class="card-text" id="hotelCard1rating">Rating</p>
-                    <p class="card-text" id="hotelCard1address">Address</p>
-                    <p class="card-text" id="hotelCard1price">Price per night/Full amount</p>
-                    <a target="_blank" href="#" class="card-link" id="hotelCard1link">Click Here for more info</a>
-                </div>
+        <div class="card border-light mb-3" style="max-width: 20rem">
+          <div class="card-header" id="hotelCard0name">Hotel Name</div>
+          <img
+            id="hotelCard0img"
+            src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
+            class="d-block w-100"
+            alt="first hotel"
+          />
+          <div class="card-body">
+            <h4 class="card-title" id="hotelCard0description">Description</h4>
+            <p class="card-text" id="hotelCard0details">
+              The hotel has a spa and a restaurant
+            </p>
+            <p class="card-text" id="hotelCard0rating">Rating</p>
+            <p class="card-text" id="hotelCard0address">Address</p>
+            <p class="card-text" id="hotelCard0price">
+              Price per night/Full amount
+            </p>
+            <a target="_blank" href="#" class="card-link" id="hotelCard0link"
+              >Click Here for more info</a
+            >
+            <!-- <a target="_blank" href="#" class="card-link" id="hotelcard3link">Click Here for more info</a> -->
           </div>
-        
-         <!-- third card -->
+        </div>
 
-            <div class="card border-light mb-3" style="max-width: 20rem;">
-              <div class="card-header" id="hotelCard2name">Hotel Name</div>
-              <img id="hotelCard2img" src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
-                class="d-block w-100" alt="first hotel">
-                <div class="card-body">
-                    <h4 class="card-title" id="hotelCard2description">Description</h4>
-                    <p class="card-text" id="hotelCard2details">The hotel has a spa and a restaurant</p>
-                    <p class="card-text" id="hotelCard2rating">Rating</p>
-                    <p class="card-text" id="hotelCard2address">Address</p>
-                    <p class="card-text" id="hotelCard2price">Price per night/Full amount</p>
-                    <a target="_blank" href="#" class="card-link" id="hotelCard2link">Click Here for more info</a>
-                </div>
+        <!-- second card -->
+        <div class="card border-light mb-3" style="max-width: 20rem">
+          <div class="card-header" id="hotelCard1name">Hotel Name</div>
+          <img
+            id="hotelCard1img"
+            src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
+            class="d-block w-100"
+            alt="first hotel"
+          />
+          <div class="card-body">
+            <h4 class="card-title" id="hotelCard1description">Description</h4>
+            <p class="card-text" id="hotelCard1details">
+              The hotel has a spa and a restaurant
+            </p>
+            <p class="card-text" id="hotelCard1rating">Rating</p>
+            <p class="card-text" id="hotelCard1address">Address</p>
+            <p class="card-text" id="hotelCard1price">
+              Price per night/Full amount
+            </p>
+            <a target="_blank" href="#" class="card-link" id="hotelCard1link"
+              >Click Here for more info</a
+            >
           </div>
-            
-         <!-- forth card -->
+        </div>
 
-            <div class="card border-light mb-3" style="max-width: 20rem;">
-              <div class="card-header" id="hotelCard3name">Hotel Name</div>
-              <img id="hotelCard3img" src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
-                class="d-block w-100" alt="first hotel">
-                <div class="card-body">
-                    <h4 class="card-title" id="hotelCard3description">Description</h4>
-                    <p class="card-text" id="hotelCard3details">The hotel has a spa and a restaurant</p>
-                    <p class="card-text" id="hotelCard3rating">Rating</p>
-                    <p class="card-text" id="hotelCard3address">Address</p>
-                    <p class="card-text" id="hotelCard3price">Price per night/Full amount</p>
-                    <a target="_blank" href="#" class="card-link" id="hotelCard3link">Click Here for more info</a>
-                </div>
+        <!-- third card -->
+
+        <div class="card border-light mb-3" style="max-width: 20rem">
+          <div class="card-header" id="hotelCard2name">Hotel Name</div>
+          <img
+            id="hotelCard2img"
+            src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
+            class="d-block w-100"
+            alt="first hotel"
+          />
+          <div class="card-body">
+            <h4 class="card-title" id="hotelCard2description">Description</h4>
+            <p class="card-text" id="hotelCard2details">
+              The hotel has a spa and a restaurant
+            </p>
+            <p class="card-text" id="hotelCard2rating">Rating</p>
+            <p class="card-text" id="hotelCard2address">Address</p>
+            <p class="card-text" id="hotelCard2price">
+              Price per night/Full amount
+            </p>
+            <a target="_blank" href="#" class="card-link" id="hotelCard2link"
+              >Click Here for more info</a
+            >
           </div>
-         
+        </div>
 
+        <!-- forth card -->
+
+        <div class="card border-light mb-3" style="max-width: 20rem">
+          <div class="card-header" id="hotelCard3name">Hotel Name</div>
+          <img
+            id="hotelCard3img"
+            src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/246583444.jpg?k=8eaa8634ea92fd1d3ae24d1a301834fcf3652baa5908a8498d4e0790f7a2dc8e&o="
+            class="d-block w-100"
+            alt="first hotel"
+          />
+          <div class="card-body">
+            <h4 class="card-title" id="hotelCard3description">Description</h4>
+            <p class="card-text" id="hotelCard3details">
+              The hotel has a spa and a restaurant
+            </p>
+            <p class="card-text" id="hotelCard3rating">Rating</p>
+            <p class="card-text" id="hotelCard3address">Address</p>
+            <p class="card-text" id="hotelCard3price">
+              Price per night/Full amount
+            </p>
+            <a target="_blank" href="#" class="card-link" id="hotelCard3link"
+              >Click Here for more info</a
+            >
+          </div>
+        </div>
+        <article class="moreHotelResults">
+          <a href="#" id="more-results" class="btn btn-primary">More results</a>
+       </article>
       </section>
 
       <!--added  a div with a class of events to display for the user-->
       <section class="events">
-         <h2 id="tag-events">While you're there...</h2>
-         <h5 class="event-heading" id="events">Events</h5>
-         <!--first event card-->
-         <div class="events-card">
-            <div class="card-body events-body">
-               <h5 class="event-title" id="eventCard0title">Event title</h5>
-               <p class="event-text" id="eventCard0info">"With supporting text below as a natural lead-in to additional content".</p>
-               <img id="eventCard0img" src="..."  class="d-block w-100" alt="first event">
-               <a target="_blank" href="#" class="event-link" id="eventCard0link">Click Here for more info</a>
-            </div>
-            <!--second event card-->
-            <div class="card-body events-body">
-               <h5 class="event-title" id="eventCard1title">Event title</h5>
-               <p class="event-text" id="eventCard1info">"With supporting text below as a natural lead-in to additional content".</p>
-               <img id="eventCard1img" src="..."  class="d-block w-100" alt="second event">
-               <a target="_blank" href="#" class="event-link" id="eventCard1link">Click Here for more info</a>
-            </div>
-            <hr>
-            <!--3rd event card-->
-            <div class="card-body events-body">
-               <h5 class="event-title" id="eventCard2title">Event title</h5>
-               <p class="event-text" id="eventCard2info">"With supporting text below as a natural lead-in to additional content".</p>
-               <img id="eventCard1img" src="..."  class="d-block w-100" alt="third event">  
-               <a target="_blank" href="#" class="event-link" id="eventCard2link">Click Here for more info</a>
-            </div>
-         
-         </div>
-         <!--use the class HIDDEN to hide the div containing the rest of the events on the page-->
-         <!--4th event card-->
-         <div class="events-card">
-            <div class="card-body events-body">
-               <h5 class="event-title" id="eventCard3title">Event title</h5>
-               <p class="event-text" id="eventCard3info">"With supporting text below as a natural lead-in to additional content".</p>
-               <img id="eventCard3img" src="..."  class="d-block w-100" alt="4th event">
-               <a target="_blank" href="#" class="event-link" id="eventCard3link">Click Here for more info</a>
-            </div>
-            <!--5th event card-->
-            <div class="card-body events-body">
-               <h5 class="event-title" id="eventCard4title">Event title</h5>
-               <p class="event-text" id="eventCard4info">"With supporting text below as a natural lead-in to additional content".</p>
-               <img id="eventCard4img" src="..."  class="d-block w-100" alt="5th event">
-               <a target="_blank" href="#" class="event-link" id="eventCard4link">Click Here for more info</a>
-            </div>
-            <!--sixth event card-->
-            <div class="card-body events-body">
-               <h5 class="event-title" id="eventCard5title">Event title</h5>
-               <p class="event-text" id="eventCard5info">"With supporting text below as a natural lead-in to additional content".</p>
-               <img id="eventCard5img" src="..."  class="d-block w-100" alt="6th event">
-               <a target="_blank" href="#" class="event-link" id="eventCard4link">Click Here for more info</a>
-            </div>
-         </div>
-         <article>
-            <a href="#" id="more-events" class="btn btn-primary center">See more</a>
+        <h2 id="tag-events">While you're there...</h2>
+        <h5 class="event-heading" id="events">Events</h5>
+        <!--first event card-->
+        <div class="events-card">
+          <div class="card-body events-body">
+            <h5 class="event-title" id="eventCard0title">Event title</h5>
+            <p class="event-text" id="eventCard0info">
+              "With supporting text below as a natural lead-in to additional
+              content".
+            </p>
+            <img
+              id="eventCard0img"
+              src="..."
+              class="d-block w-100"
+              alt="first event"
+            />
+            <a target="_blank" href="#" class="event-link" id="eventCard0link"
+              >Click Here for more info</a
+            >
+          </div>
+          <!--second event card-->
+          <div class="card-body events-body">
+            <h5 class="event-title" id="eventCard1title">Event title</h5>
+            <p class="event-text" id="eventCard1info">
+              "With supporting text below as a natural lead-in to additional
+              content".
+            </p>
+            <img
+              id="eventCard1img"
+              src="..."
+              class="d-block w-100"
+              alt="second event"
+            />
+            <a target="_blank" href="#" class="event-link" id="eventCard1link"
+              >Click Here for more info</a
+            >
+          </div>
+          <hr />
+          <!--3rd event card-->
+          <div class="card-body events-body">
+            <h5 class="event-title" id="eventCard2title">Event title</h5>
+            <p class="event-text" id="eventCard2info">
+              "With supporting text below as a natural lead-in to additional
+              content".
+            </p>
+            <img
+              id="eventCard1img"
+              src="..."
+              class="d-block w-100"
+              alt="third event"
+            />
+            <a target="_blank" href="#" class="event-link" id="eventCard2link"
+              >Click Here for more info</a
+            >
+          </div>
+        </div>
+        <!--use the class HIDDEN to hide the div containing the rest of the events on the page-->
+        <!--4th event card-->
+        <div class="events-card">
+          <div class="card-body events-body">
+            <h5 class="event-title" id="eventCard3title">Event title</h5>
+            <p class="event-text" id="eventCard3info">
+              "With supporting text below as a natural lead-in to additional
+              content".
+            </p>
+            <img
+              id="eventCard3img"
+              src="..."
+              class="d-block w-100"
+              alt="4th event"
+            />
+            <a target="_blank" href="#" class="event-link" id="eventCard3link"
+              >Click Here for more info</a
+            >
+          </div>
+          <!--5th event card-->
+          <div class="card-body events-body">
+            <h5 class="event-title" id="eventCard4title">Event title</h5>
+            <p class="event-text" id="eventCard4info">
+              "With supporting text below as a natural lead-in to additional
+              content".
+            </p>
+            <img
+              id="eventCard4img"
+              src="..."
+              class="d-block w-100"
+              alt="5th event"
+            />
+            <a target="_blank" href="#" class="event-link" id="eventCard4link"
+              >Click Here for more info</a
+            >
+          </div>
+          <!--sixth event card-->
+          <div class="card-body events-body">
+            <h5 class="event-title" id="eventCard5title">Event title</h5>
+            <p class="event-text" id="eventCard5info">
+              "With supporting text below as a natural lead-in to additional
+              content".
+            </p>
+            <img
+              id="eventCard5img"
+              src="..."
+              class="d-block w-100"
+              alt="6th event"
+            />
+            <a target="_blank" href="#" class="event-link" id="eventCard4link"
+              >Click Here for more info</a
+            >
+          </div>
+        </div>
+        <article>
+            <a href="#" id="more-events" class="btn btn-primary center"
+            >See more</a>
          </article>
-      </section>
-      <!--added a footer to the page -->
-      <footer id="footer">
-         <h5 class="footer-heading">TravelXperience</h5>
-         <ul id="footer-links">
-            <!--connected the footer links to sections on page-->
-            <li><a href="#search-results-hotel">Book now</a></li>
-            <li><a href="#carousel">See hotels</a></li>
-            <li><a href="#events">Events</a></li>
-         </ul>
-         <p id="copy">&copyGroup18</p>
-      </footer>
-   </main>
-   <!-- MomentJS -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-   <script src="./assets/js/script.js"></script>
-</body>
-
+         </section>
+         <!--added a footer to the page -->
+         <footer id="footer">
+            <h5 class="footer-heading">TravelXperience</h5>
+            <ul id="footer-links">
+             <!--connected the footer links to sections on page-->
+               <li><a href="#search-results-hotel">Book now</a></li>
+               <li><a href="#carousel">See hotels</a></li>
+               <li><a href="#events">Events</a></li>
+            </ul>
+            <p id="copy">&copyGroup18</p>
+         </footer>
+      </main>
+    <!-- MomentJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+   </body>
 </html>

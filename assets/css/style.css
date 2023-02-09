@@ -209,7 +209,7 @@ input {
 
 /* Footer Styles */
 footer {
-   background-color: rgb(181, 172, 172);
+   background-color: rgb(176, 171, 171);
    border-radius: 5px;
    padding: 5px;
    width: auto;
@@ -329,6 +329,26 @@ body {
 /*added copy sign*/
 #copy {
    position: relative;
-   top: 3em;
-   left: 36em;
+   top: 4em;
+   left: 45em;
+   font-size:small;
+   font-weight: bolder;
+}
+main {
+   width: 80rem;;
+}
+#moreResults {
+   margin: 2rem;
+   padding: 0.2rem;
+   width: 7rem;
+   height: 3rem;
+   background-color: #8bc5dc;
+   border: none;
+   border-radius: 5px;
+   display: inline-block;
+   text-align: center;
+}
+.moreHotelResults {
+   position: relative;
+   left: 33rem;
 }

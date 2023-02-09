@@ -9,6 +9,7 @@ h3,
 h4,
 h5 {
    font-family: 'Quicksand', sans-serif;
+   font-weight: bold;
 }
 
 label,
@@ -59,8 +60,6 @@ section {
 .navbar a {
    display: inline-flex;
    color: #000000;
-   border-bottom: #3671C3 solid 2px;
-
 }
 
 .navbar a:hover {
@@ -70,7 +69,10 @@ section {
 
 /* Search/Form Section Styles  */
 #search-button {
-   margin: 40px;
+   margin: 2rem;
+   padding: 0.2rem;
+   width: 7rem;
+   height: 3rem;
    background-color: #3671C3;
    border: none;
    border-radius: 5px;
@@ -150,7 +152,7 @@ input {
 }
 
 #logo {
-   height: 4.5rem;
+   height: 5rem;
 }
 
 .booknow {
@@ -247,9 +249,9 @@ footer {
 }
 
 #more-events {
-   height: 50px;
+   height: 3rem;
+   width: 7rem;
    font-family: 'Quicksand', sans-serif;
-   width: 150px;
    background-color: #3671C3;
 
 
@@ -281,7 +283,7 @@ article {
 input {
    padding: 0.2rem;
    margin: 0.1rem;
-   border: 2px solid rgb(217, 158, 47);
+   border: 2px solid rgb(232, 169, 52);
    border-radius: 0.4rem;
 }
 /* label input*/
@@ -314,10 +316,15 @@ body {
    text-align: center;
    margin: 0.3em;
    padding: 0.2em;
-   background-image:linear-gradient(rgb(218, 241, 251), rgb(206, 215, 234));
+   background-image:linear-gradient(rgb(233, 244, 249), rgb(208, 217, 238));
 }
 /*sorted the cards*/
 .events-body{
    border-style: dotted;
    background-image:linear-gradient(rgb(224, 199, 220), rgb(201, 189, 247));
+}
+.footer-heading {
+   position: relative;
+   left: 1em;
+   top: 0.2em;
 }

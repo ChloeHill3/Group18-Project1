@@ -32,9 +32,7 @@ document.querySelector("#search-button").addEventListener("click", function (eve
       console.log("event City"+eventCityName," City Name "+cityName)
       citySearch(cityName, startDate, endDate)
 
-      // countryName = countries[0];
-      // destId = destinationId[0];
-      // booking(destId);
+      
    };
 
 
@@ -48,8 +46,9 @@ function dataToCarousel(params) {
    k = 2;
    for (let i = 0; i < 4; i++) {
       let hotelCardName = "hotelCard" + i;
-      console.log(hotelCardName);
-      console.log(params[i+k].url)
+      // setTimeout(5000);
+      // console.log(hotelCardName);
+      // console.log(params[i+k].url)
       // console.log(params[i].hotel_name);
       document.getElementById(hotelCardName+"name").textContent = params[i+k].hotel_name;
       document.getElementById(hotelCardName+"details").textContent ="Review score:"+params[i+k].review_score+" Check In at "+params[i+k].checkin+ " "+"Check Out at "+params[i+k].checkout;
@@ -63,14 +62,30 @@ function dataToCarousel(params) {
       document.getElementById(hotelCardName+"link").href = params[i+k].url;
      
    }
+}//==============end of the dataToCarousel
+
+function dataToEvents(parObj) {
+
+      console.log("data from Event obj-in function", parObj)
+      k = 2;
+      for (let i = 0; i < 4; i++) {
+         let eventCardName = "eventCard" + i;
+         console.log(eventCardName);
+         document.getElementById(eventCardName+"title").textContent = parObj[i+k].event_name;
+         document.getElementById(eventCardName+"info").textContent =("Event date: "+parObj[i+k].start_date+" Starts at "+parObj[i+k].start_time);
+         let eventImgEl=document.getElementById(eventCardName+"img")
+         let imgUrl=parObj[i+k].photo
+         eventImgEl.setAttribute("src",imgUrl);
+         document.getElementById(eventCardName+"link").href = parObj[i+k].url;
+        
+      }
+   
+   
+   
 
 
-}
 
-function dataToEvents(params) {
-
-
-}
+} //==============end of the dataToEvents
 
 
 function citySearch(cityName, startDate, endDate) {
@@ -149,8 +164,9 @@ function bookingSearch(dest, startDate, endDate) {
 function events(city, start, end) {
 
    console.log(city, start, end);
+   start=start+"T00:00:00Z";
    // num.toString()&startDateTime=2023-02-10
-   queryURLEvents = "https://app.ticketmaster.com/discovery/v2/events.json?city="+city+"&size=200&apikey=hQFb4tXqGqiHrogU7XknBuIpl0lYAK4h";
+   queryURLEvents = "https://app.ticketmaster.com/discovery/v2/events.json?city="+city+"&startDateTime="+start+"&size=200&apikey=hQFb4tXqGqiHrogU7XknBuIpl0lYAK4h";
    // queryURLEvents = "https://app.ticketmaster.com/discovery/v2/events.json?city=sheffield&size=200&apikey=hQFb4tXqGqiHrogU7XknBuIpl0lYAK4h";
    fetch(queryURLEvents)
       .then(response => response.json())
@@ -169,7 +185,11 @@ function events(city, start, end) {
          console.log("hotel Data before render", hotelDataOBJ);
          console.log("events Data before render", EventsDataOBJ);
 
-         dataToCarousel(hotelDataOBJ)
+         dataToCarousel(hotelDataOBJ);
+         // console.log("before event function called", EventsDataOBJ);
+         dataToEvents(EventsDataOBJ);
+
+
       }); 
       
 }

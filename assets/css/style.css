@@ -66,8 +66,7 @@ section {
 
 /* Search/Form Section Styles  */
 #search-button {
-   margin: 10px;
-   border-radius: 2px;
+   margin: 40px;
    background-color: #3671C3;
    border: none;
    border-radius: 5px;
@@ -111,7 +110,14 @@ input {
 #search-results-hotel {
    display: flex;
    justify-content: center;
+   justify-items: center;
    align-items: center;
+   background-image: url(/assets/images/formBkg.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   object-fit: contain;
+   width:60%;
 }
 
 /* Carousel Styles */
@@ -198,12 +204,13 @@ input {
 
 /* Footer Styles */
 footer {
-   background-color: rgb(236, 236, 236);
+   background-color: rgb(181, 172, 172);
    border-radius: 5px;
    padding: 5px;
    width: auto;
    height: 150px;
    margin: 15px 25px 15px 25px;
+   font-weight: bold;
 }
 
 #footer-links {
@@ -279,4 +286,17 @@ label {
    margin: 0.1rem;
    padding: 0.2rem;
    font-weight: bold;
+}
+/* */
+#search-results-hotel {
+   width: 80rem;
+   height: 20rem;
+}
+body {
+   padding: 0.2em;
+   margin: 0.1em;
+   
+}
+#form-div {
+   padding-top: 2rem;
 }

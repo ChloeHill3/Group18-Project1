@@ -70,13 +70,12 @@
             <input class="city-search" type="date" id="end-date" placeholder="End date" />
 
             <!--input for number of rooms, adults, children-->
-            <hr class="hr">
-
             <label for="adults">Number of Adults:</label>
             <input type="number" id="adults" name="adults" min="1" max="10" value="1" required>
 
             <label for="rooms">Number of Rooms:</label>
             <input type="number" id="rooms" name="rooms" min="1" max="5" value="1" required>
+         
             <div class="button-search">
               <button type="submit" class="btn btn-info btn-md search-button" id="search-button"
                  aria-label="submit search">
@@ -164,7 +163,7 @@
       <!--added  a div with a class of events to display for the user-->
       <section class="events">
          <h2 id="tag-events">While you're there...</h2>
-         <h5 class="event-heading">Events</h5>
+         <h5 class="event-heading" id="events">Events</h5>
          <!--first event card-->
          <div class="events-card">
             <div class="card-body">
@@ -221,7 +220,7 @@
       <footer id="footer">
          <ul id="footer-links">
             <!--connected the footer links to sections on page-->
-            <li><a href="#form-div">Book now</a></li>
+            <li><a href="#search-results-hotel">Book now</a></li>
             <li><a href="#carousel">See hotels</a></li>
             <li><a href="#events">Events</a></li>
          </ul>

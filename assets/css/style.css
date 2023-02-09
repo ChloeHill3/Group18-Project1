@@ -1,7 +1,8 @@
 /* Global Styles */
-.heading {
+.heading, #events {
    font-family: 'Quicksand', sans-serif;
    font-size: 30px;
+   font-weight: bold;
 }
 
 h3,
@@ -17,7 +18,10 @@ p {
    font-family: 'Quicksand', sans-serif;
 }
 
-
+.nav-link {
+   font-weight: bold;
+   color: #28538f;
+}
 .nav-item a {
    font-family: 'Quicksand', sans-serif;
 }
@@ -171,7 +175,7 @@ input {
 
 
 .btn-primary {
-   display: block;
+   display: inline-block;
 }
 
 #tag-events {
@@ -230,13 +234,12 @@ footer {
 }
 
 .events-card {
-
    display: flex;
-   justify-content: space-evenly;
+   justify-content: space-around;
    padding: 0.5rem;
    border: 10px solid #e7e7e7;
    border-radius: 5px;
-   height: 250px;
+   height: 20rem;
 }
 
 .hidden {
@@ -294,9 +297,27 @@ label {
 }
 body {
    padding: 0.2em;
-   margin: 0.1em;
+   margin: 0.3em;
    
 }
 #form-div {
    padding-top: 2rem;
+}
+.event-title {
+   padding: 0.2rem; 
+   color: rgb(60, 22, 210);
+   font-weight: bold;
+   font-size: 1.5rem;
+   text-align: center;
+}
+.card-body {
+   text-align: center;
+   margin: 0.3em;
+   padding: 0.2em;
+   background-image:linear-gradient(rgb(218, 241, 251), rgb(206, 215, 234));
+}
+/*sorted the cards*/
+.events-body{
+   border-style: dotted;
+   background-image:linear-gradient(rgb(224, 199, 220), rgb(201, 189, 247));
 }

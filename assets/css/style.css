@@ -267,3 +267,16 @@ article {
    display: flex;
    justify-content: center;
 }
+/*input buttons*/
+input {
+   padding: 0.2rem;
+   margin: 0.1rem;
+   border: 2px solid rgb(217, 158, 47);
+   border-radius: 0.4rem;
+}
+/* label input*/
+label {
+   margin: 0.1rem;
+   padding: 0.2rem;
+   font-weight: bold;
+}

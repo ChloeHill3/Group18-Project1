@@ -156,7 +156,7 @@ function citySearch(cityName, startDate, endDate) {
    const options = {
       method: 'GET',
       headers: {
-         'X-RapidAPI-Key': 'a596769838msh77f4783e3758cd5p1517b7jsn589aaf3580c9',
+         'X-RapidAPI-Key': 'c5a091254fmsh50d7ed70ccb9fc2p12b177jsncf36da05ba92',
          'X-RapidAPI-Host': 'booking-com.p.rapidapi.com'
       }
    };
@@ -182,7 +182,7 @@ function bookingSearch(dest, startDate, endDate) {
    const options = {
       method: 'GET',
       headers: {
-         'X-RapidAPI-Key': 'a596769838msh77f4783e3758cd5p1517b7jsn589aaf3580c9',
+         'X-RapidAPI-Key': 'c5a091254fmsh50d7ed70ccb9fc2p12b177jsncf36da05ba92',
          'X-RapidAPI-Host': 'booking-com.p.rapidapi.com'
       }
    };

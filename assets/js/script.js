@@ -51,7 +51,7 @@ document.querySelector("#search-button").addEventListener("click", function (eve
       event.preventDefault();
       var localStorageHotelOBJ = JSON.parse(localStorage.getItem("localStorageHotelOBJ"));
       if (hotelCounter<16){hotelCounter = hotelCounter+4;} else{hotelCounter=0;}
-      console.log(hotelCounter)
+      // console.log(hotelCounter)
       dataToCarousel(localStorageHotelOBJ,hotelCounter);
    }) //===== end of event listeners for HOTELS 
 
@@ -60,8 +60,8 @@ document.querySelector("#search-button").addEventListener("click", function (eve
       var localStorageEventsOBJ = JSON.parse(localStorage.getItem("localStorageEventsOBJ"));
       // j=Math.floor(((localStorageEventsOBJ.length)/6))-1;
       // console.log("event repeat sequence",j);
-      if (eventCounter<60){eventCounter = eventCounter+6;} else{eventCounter=0;}
-      console.log(localStorageEventsOBJ,eventCounter)
+      if (eventCounter<100){eventCounter = eventCounter+6;} else{eventCounter=0;}
+      // console.log(localStorageEventsOBJ,eventCounter)
       dataToEvents(localStorageEventsOBJ,eventCounter);
    }) //===== end of event listeners for EVENTS
    
@@ -91,7 +91,7 @@ function addingSavedData (){
           }     
       //    var searchedCities = JSON.parse(localStorage.getItem("searchedCities"));
    //    localStorage.setItem("searchedCities", JSON.stringify(searchedCities));
-console.log(localStorageHotel);
+// console.log(localStorageHotel);
 for (let i = 0; i < 4; i++) {
    let hotelCardName = "hotelCard" + i;
    document.getElementById(hotelCardName+"name").textContent =  localStorageHotel[i*6];
@@ -182,7 +182,7 @@ function citySearch(cityName, startDate, endDate) {
       .then(response => response.json())
       .then(data => {
          let responseData = data;
-         console.log("cityData, for id: ", responseData);
+         // console.log("cityData, for id: ", responseData);
          
          for (let i = 0; i < 5; i++) {
             countries[i] = responseData[i].country;
@@ -209,7 +209,7 @@ function bookingSearch(dest, startDate, endDate) {
       .then(data => {
          let responseData = data;
          // hotelData = [];
-         console.log(responseData);
+         // console.log(responseData);
 
          for (let i = 0; i < responseData.result.length; i++) {
 
@@ -243,7 +243,7 @@ function bookingSearch(dest, startDate, endDate) {
    
    function events(city, start, end) {
       
-      console.log(city, start, end);
+      // console.log(city, start, end);
       start=start+"T00:00:00Z";
       end=end+"T00:00:00Z";
       // num.toString()&startDateTime=2023-02-10
@@ -265,7 +265,8 @@ function bookingSearch(dest, startDate, endDate) {
                      
          }
          
-         // console.log("hotel Data before render", hotelDataOBJ);  // console.log("events Data before render", EventsDataOBJ);
+         console.log("hotel Data before render", hotelDataOBJ);
+         console.log("events Data before render", EventsDataOBJ);
          localStorage.setItem("localStorageEventsOBJ", JSON.stringify(EventsDataOBJ))
          
          dataToCarousel(hotelDataOBJ,0);

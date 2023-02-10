@@ -9,7 +9,7 @@ h3,
 h4,
 h5 {
    font-family: 'Quicksand', sans-serif;
-   font-weight: bold;
+   font-weight: bolder;
 }
 
 label,
@@ -71,7 +71,6 @@ section {
 /* Search/Form Section Styles  */
 #search-button {
    margin: 2rem;
-   padding: 0.2rem;
    width: 7rem;
    height: 3rem;
    background-color: #3671C3;
@@ -148,6 +147,8 @@ input {
 
 .card-header {
    font-family: 'Quicksand', sans-serif;
+   font-weight:bold;
+   
 
 }
 
@@ -312,6 +313,7 @@ label {
    margin: 0.3em;
    padding: 0.2em;
    background-image:linear-gradient(rgb(233, 244, 249), rgb(189, 233, 249));
+   font-weight: bold;
 }
 /*sorted the cards*/
 .events-body{
@@ -344,10 +346,11 @@ main {
    border-radius: 5px;
    display: inline-block;
    text-align: center;
+
 }
 .moreHotelResults {
    position: relative;
-   left: 33rem;
+   left: 34.5rem;
 }
 
 html, body {
@@ -369,5 +372,4 @@ overflow-x: hidden;
    width: 11rem;
    height: 10rem;
 }
-
 

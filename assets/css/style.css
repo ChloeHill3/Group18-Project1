@@ -118,7 +118,7 @@ input {
    justify-content: center;
    justify-items: center;
    align-items: center;
-   background-image: url(/assets/images/formBkg.jpg);
+   background-image: url("/assets/images/formBkg.jpg");
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;

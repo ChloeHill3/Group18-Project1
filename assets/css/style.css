@@ -344,10 +344,11 @@ main {
    border-radius: 5px;
    display: inline-block;
    text-align: center;
+
 }
 .moreHotelResults {
    position: relative;
-   left: 33rem;
+   left: 34.5rem;
 }
 
 html, body {

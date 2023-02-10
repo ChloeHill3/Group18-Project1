@@ -9,7 +9,7 @@ h3,
 h4,
 h5 {
    font-family: 'Quicksand', sans-serif;
-   font-weight: bold;
+   font-weight: bolder;
 }
 
 label,
@@ -147,6 +147,8 @@ input {
 
 .card-header {
    font-family: 'Quicksand', sans-serif;
+   font-weight:bold;
+   
 
 }
 
@@ -311,6 +313,7 @@ label {
    margin: 0.3em;
    padding: 0.2em;
    background-image:linear-gradient(rgb(233, 244, 249), rgb(189, 233, 249));
+   font-weight: bold;
 }
 /*sorted the cards*/
 .events-body{

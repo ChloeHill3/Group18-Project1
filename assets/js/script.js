@@ -17,6 +17,7 @@ let localStorageHotel = [];
 let localStorageEvents = [];
 let localStorageHotelOBJ = {};
 let localStorageEventsOBJ = {};
+let eventTotal=0;
 let tempHotelData = ["Phoenix Hotel","Review score:8.3 Check In at 13:00 Check Out at 11:00","1-8 Kensington Garden Square, W2 4BH","price per night GBP 100.5 /Full amount GBP 251.25","https://cf.bstatic.com/xdata/images/hotel/max1280x900/126384338.jpg?k=fca4950f46fbe387b1c81a1dc97b82a27197e1e1363ad0a42dc14922fcede614&o=","https://www.booking.com/hotel/gb/phoenixhotel.html","Radisson Blu Edwardian Bloomsbury Street Hotel, London","Review score:8.4 Check In at 15:00 Check Out at 11:00","9-13 Bloomsbury Street, Nr Covent Garden, WC1B 3QD","price per night GBP 250.18 /Full amount GBP 625.45","https://cf.bstatic.com/xdata/images/hotel/max1280x900/306934099.jpg?k=1b2e7236f35829f64f10f521476d2858a4448cb05624f138dc694e8ad7cd2aad&o=","https://www.booking.com/hotel/gb/radissonedwardianmarlborough.html","Aloft London Excel","Review score:8.3 Check In at 15:00 Check Out at 12:00","One Eastern Gateway, Royal Victoria Dock, E16 1FR","price per night GBP 119.66 /Full amount GBP 299.16","https://cf.bstatic.com/xdata/images/hotel/max1280x900/373996226.jpg?k=66105663f9ba5946ddb22ba6c678e438df9b4507aa5fe1787279f1e2e2089e6d&o=","https://www.booking.com/hotel/gb/aloft-london-excel.html","citizenM London Bankside","Review score:8.6 Check In at 14:00 Check Out at 11:00","20 Lavington Street, SE1 0NZ","price per night GBP 162.33 /Full amount GBP 405.83","https://cf.bstatic.com/xdata/images/hotel/max1280x900/270976856.jpg?k=2a59631ae56e4796972a91ab7d9f353a0259fb0e669f07aa4e72e49e7b124478&o=","https://www.booking.com/hotel/gb/citizenm-london-bankside.html"]
 let tempEventsData =["Wicked","Event date: 2023-02-15 Starts at 14:30:00","https://s1.ticketm.net/dam/a/419/01f28290-5703-4eff-a2d6-053f5c79c419_1619391_RETINA_PORTRAIT_3_2.jpg","https://theatre.ticketmaster.co.uk/book/1DU1L-apollo-victoria-london-wicked/#perf=1DU1L-16N&date=2023-02-15&time=2.30PM",
                "Best of Enemies","Event date: 2023-02-15 Starts at 14:30:00","https://s1.ticketm.net/dam/a/89b/068b7e13-7efa-4b5a-9ef2-97c20393c89b_1779961_RETINA_PORTRAIT_3_2.jpg","https://theatre.ticketmaster.co.uk/book/1EWPY-best-of-enemies/#perf=1EWPY-2Z&date=2023-02-15&time=2.30PM",
@@ -60,7 +61,7 @@ document.querySelector("#search-button").addEventListener("click", function (eve
       var localStorageEventsOBJ = JSON.parse(localStorage.getItem("localStorageEventsOBJ"));
       // j=Math.floor(((localStorageEventsOBJ.length)/6))-1;
       // console.log("event repeat sequence",j);
-      if (eventCounter<100){eventCounter = eventCounter+6;} else{eventCounter=0;}
+      if (eventCounter<(Math.floor(eventTotal/6-1)*6)){eventCounter = eventCounter+6;} else{eventCounter=0;}
       // console.log(localStorageEventsOBJ,eventCounter)
       dataToEvents(localStorageEventsOBJ,eventCounter);
    }) //===== end of event listeners for EVENTS
@@ -253,8 +254,9 @@ function bookingSearch(dest, startDate, endDate) {
       .then(response => response.json())
       .then(data => {
          let eventsData = data;
+         eventTotal=eventsData._embedded.events.length;
          // console.log(cityName,startDate,endDate)
-         for (let i = 0; i < eventsData._embedded.events.length; i++) {
+         for (let i = 0; i < eventTotal; i++) {
             
             EventsDataOBJ[i] =
             {

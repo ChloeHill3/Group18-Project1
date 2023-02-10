@@ -86,7 +86,7 @@ section {
    display: flex;
    justify-content: center;
    align-items: center;
-   background-image: url("/assets/images/hero-banner.svg");
+   background-image: url(/assets/images/hero-banner.svg);
    height: 220px;
    background-position: center;
    background-repeat: no-repeat;
@@ -118,7 +118,7 @@ input {
    justify-content: center;
    justify-items: center;
    align-items: center;
-   background-image: url("/assets/images/formBkg.jpg");
+   background-image: url(/assets/images/formBkg.jpg);
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
